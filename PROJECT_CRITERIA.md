@@ -62,3 +62,4 @@ Hệ thống tập trung vào 12 dòng nội dung thịnh hành:
 ## 7. Phân mục & Menu xuất video tiện lợi
 * Tích hợp sẵn `Render_Menu.bat` xuất từng video lẻ hoặc xuất trọn bộ chỉ với 1 phím bấm.
 * Đồng bộ 100% giữa môi trường làm việc và thư mục ngoài Desktop.
+
