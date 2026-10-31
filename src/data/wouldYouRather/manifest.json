@@ -1,0 +1,42 @@
+[
+  {
+    "episode": 1,
+    "id": "WouldYouRather-Ep1",
+    "title": "Superpowers Dilemma",
+    "duration": 33,
+    "totalFrames": 990,
+    "dilemmaCount": 3
+  },
+  {
+    "episode": 2,
+    "id": "WouldYouRather-Ep2",
+    "title": "Wealth & Lifestyle",
+    "duration": 33,
+    "totalFrames": 990,
+    "dilemmaCount": 3
+  },
+  {
+    "episode": 3,
+    "id": "WouldYouRather-Ep3",
+    "title": "Extreme Survival",
+    "duration": 33,
+    "totalFrames": 990,
+    "dilemmaCount": 3
+  },
+  {
+    "episode": 4,
+    "id": "WouldYouRather-Ep4",
+    "title": "Future & Technology",
+    "duration": 33,
+    "totalFrames": 990,
+    "dilemmaCount": 3
+  },
+  {
+    "episode": 5,
+    "id": "WouldYouRather-Ep5",
+    "title": "Impossible Paradoxes",
+    "duration": 33,
+    "totalFrames": 990,
+    "dilemmaCount": 3
+  }
+]

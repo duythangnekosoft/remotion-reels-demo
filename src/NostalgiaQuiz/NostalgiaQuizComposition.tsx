@@ -11,7 +11,6 @@ import {
 } from "remotion";
 import { NostalgiaQuizQuestion } from "./NostalgiaQuizQuestion";
 import { NOSTALGIA_EPISODES } from "../data/nostalgiaEpisodes";
-import { StudioBilingualBadge } from "../components/StudioBilingualBadge";
 import { getQuizTiming } from "../data/timelineUtils";
 
 export const NostalgiaQuizComposition: React.FC<{ episode?: number }> = ({
@@ -38,13 +37,7 @@ export const NostalgiaQuizComposition: React.FC<{ episode?: number }> = ({
         overflow: "hidden",
       }}
     >
-      <StudioBilingualBadge
-        topicEn="80s & 90s Nostalgia Quiz"
-        topicVn="Đố Vui Hoài Niệm Tuổi Thơ 80s 90s"
-        epNumber={episode}
-        epTitleEn={currentEpisode.title}
-      />
-
+      
       {/* Background Music Loop */}
       <Audio src={staticFile("audio/bgm_loop.wav")} loop volume={0.16} />
 

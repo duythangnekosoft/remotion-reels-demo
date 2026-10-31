@@ -11,7 +11,7 @@ import {
 } from "remotion";
 import { COMPANIES, MILESTONES } from "./raceData";
 import { CompanyLogo } from "./CompanyLogo";
-import { StudioBilingualBadge } from "../components/StudioBilingualBadge";
+
 
 // Helper: Linear interpolation between historical data points
 function getMarketCapAtYear(
@@ -92,25 +92,23 @@ export const BarChartRaceComposition: React.FC = () => {
         overflow: "hidden",
       }}
     >
-      <StudioBilingualBadge
-        topicEn="Tech Giants Market Cap Race"
-        topicVn="Đua Top Vốn Hóa Công Nghệ (2000-2026)"
-      />
-
-      {/* Audio Layer */}
+            {/* Audio Layer */}
       <Audio src={staticFile("audio/bgm_loop.wav")} loop volume={0.22} />
 
       <Sequence from={6} durationInFrames={110}>
         <Audio src={staticFile("audio/race_intro.wav")} volume={1.0} />
       </Sequence>
 
-      {[171, 252, 393, 494, 514].map((milestoneFrame) => (
-        <Sequence key={milestoneFrame} from={milestoneFrame} durationInFrames={12}>
-          <Audio src={staticFile("audio/pop.wav")} volume={0.65} />
-        </Sequence>
-      ))}
+      {MILESTONES.map((m) => {
+        const mFrame = Math.round(interpolate(m.year, [2000, 2026], [START_FRAME, END_FRAME]));
+        return (
+          <Sequence key={m.year} from={mFrame} durationInFrames={12}>
+            <Audio src={staticFile("audio/pop.wav")} volume={0.65} />
+          </Sequence>
+        );
+      })}
 
-      <Sequence from={540} durationInFrames={60}>
+      <Sequence from={END_FRAME - 15} durationInFrames={60}>
         <Audio src={staticFile("audio/celebrate.wav")} volume={0.7} />
       </Sequence>
 

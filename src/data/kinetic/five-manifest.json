@@ -1,0 +1,90 @@
+[
+  {
+    "id": "HeartBloom",
+    "kind": "heart",
+    "title": "HEART BLOOM",
+    "titleVn": "Heart Bloom • Neon Kinetic Illumination",
+    "frames": 1139,
+    "finishFrame": 1063,
+    "duration": 37.96666666666667,
+    "events": 104,
+    "result": {
+      "totalCells": 1001,
+      "lit": 1001,
+      "balls": 105,
+      "goal": "all cells lit"
+    }
+  },
+  {
+    "id": "OrbitBloom",
+    "kind": "orbit",
+    "title": "ORBIT BLOOM",
+    "titleVn": "Orbit Bloom • Orbital Spark Cascades",
+    "frames": 1036,
+    "finishFrame": 960,
+    "duration": 34.53333333333333,
+    "events": 407,
+    "result": {
+      "totalCells": 1456,
+      "lit": 1456,
+      "balls": 408,
+      "goal": "all cells lit"
+    }
+  },
+  {
+    "id": "RingRivals",
+    "kind": "rings",
+    "title": "RING RIVALS",
+    "titleVn": "Ring Rivals • Red vs Blue Arena",
+    "frames": 1117,
+    "finishFrame": 1042,
+    "duration": 37.233333333333334,
+    "events": 147,
+    "result": {
+      "score": [
+        72,
+        75
+      ],
+      "rings": 147,
+      "remainingRadius": 8.75,
+      "goal": "arena closed",
+      "winner": "BLUE"
+    }
+  },
+  {
+    "id": "SquareRivals",
+    "kind": "square",
+    "title": "SQUARE RIVALS",
+    "titleVn": "Square Rivals • Gold vs Violet Arena",
+    "frames": 1105,
+    "finishFrame": 1030,
+    "duration": 36.833333333333336,
+    "events": 197,
+    "result": {
+      "score": [
+        98,
+        99
+      ],
+      "rings": 197,
+      "remainingRadius": 9.89999999999899,
+      "goal": "arena closed",
+      "winner": "VIOLET"
+    }
+  },
+  {
+    "id": "PrismCollapse",
+    "kind": "brick",
+    "title": "PRISM COLLAPSE",
+    "titleVn": "Prism Collapse • 796 Neon Brick Breaker",
+    "frames": 1055,
+    "finishFrame": 980,
+    "duration": 35.166666666666664,
+    "events": 796,
+    "result": {
+      "totalBricks": 796,
+      "remaining": 0,
+      "balls": 797,
+      "goal": "all bricks destroyed"
+    }
+  }
+]

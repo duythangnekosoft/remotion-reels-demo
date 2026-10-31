@@ -1,0 +1,37 @@
+[
+  {
+    "episode": 1,
+    "id": "Plinko-Ep1",
+    "duration": 33.27,
+    "totalFrames": 998,
+    "targetReachedSec": "26.3"
+  },
+  {
+    "episode": 2,
+    "id": "Plinko-Ep2",
+    "duration": 30.67,
+    "totalFrames": 920,
+    "targetReachedSec": "23.7"
+  },
+  {
+    "episode": 3,
+    "id": "Plinko-Ep3",
+    "duration": 34.47,
+    "totalFrames": 1034,
+    "targetReachedSec": "27.5"
+  },
+  {
+    "episode": 4,
+    "id": "Plinko-Ep4",
+    "duration": 32.13,
+    "totalFrames": 964,
+    "targetReachedSec": "25.1"
+  },
+  {
+    "episode": 5,
+    "id": "Plinko-Ep5",
+    "duration": 33.13,
+    "totalFrames": 994,
+    "targetReachedSec": "26.1"
+  }
+]

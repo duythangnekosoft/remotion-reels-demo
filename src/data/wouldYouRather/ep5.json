@@ -1,0 +1,165 @@
+{
+  "episode": 5,
+  "title": "Impossible Paradoxes",
+  "secondsPerDilemma": 11,
+  "framesPerDilemma": 330,
+  "totalFrames": 990,
+  "duration": 33,
+  "dilemmas": [
+    {
+      "question": "AGE VS WEALTH",
+      "optionA": {
+        "text": "BE 10 YEARS OLDER & BILLIONAIRE",
+        "emoji": "💎",
+        "pct": 53
+      },
+      "optionB": {
+        "text": "BE 10 YEARS YOUNGER & BROKE",
+        "emoji": "⏳",
+        "pct": 47
+      }
+    },
+    {
+      "question": "TRUTH OR TRUST?",
+      "optionA": {
+        "text": "ALWAYS KNOW WHEN SOMEONE LIES",
+        "emoji": "🔍",
+        "pct": 67
+      },
+      "optionB": {
+        "text": "EVERYONE ALWAYS BELIEVES YOU",
+        "emoji": "🤝",
+        "pct": 33
+      }
+    },
+    {
+      "question": "MODERN CONVENIENCE",
+      "optionA": {
+        "text": "NEVER HIT TRAFFIC LIGHTS OR JAMS",
+        "emoji": "🚦",
+        "pct": 51
+      },
+      "optionB": {
+        "text": "FREE 10GB/S WI-FI ANYWHERE ON EARTH",
+        "emoji": "📶",
+        "pct": 49
+      }
+    }
+  ],
+  "events": [
+    {
+      "t": 2,
+      "type": "tick",
+      "count": 5,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 3,
+      "type": "tick",
+      "count": 4,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 4,
+      "type": "tick",
+      "count": 3,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 5,
+      "type": "tick",
+      "count": 2,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 6,
+      "type": "tick",
+      "count": 1,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 7.5,
+      "type": "reveal",
+      "dilemmaIdx": 0,
+      "winner": "A",
+      "pctA": 53,
+      "pctB": 47
+    },
+    {
+      "t": 13,
+      "type": "tick",
+      "count": 5,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 14,
+      "type": "tick",
+      "count": 4,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 15,
+      "type": "tick",
+      "count": 3,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 16,
+      "type": "tick",
+      "count": 2,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 17,
+      "type": "tick",
+      "count": 1,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 18.5,
+      "type": "reveal",
+      "dilemmaIdx": 1,
+      "winner": "A",
+      "pctA": 67,
+      "pctB": 33
+    },
+    {
+      "t": 24,
+      "type": "tick",
+      "count": 5,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 25,
+      "type": "tick",
+      "count": 4,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 26,
+      "type": "tick",
+      "count": 3,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 27,
+      "type": "tick",
+      "count": 2,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 28,
+      "type": "tick",
+      "count": 1,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 29.5,
+      "type": "reveal",
+      "dilemmaIdx": 2,
+      "winner": "A",
+      "pctA": 51,
+      "pctB": 49
+    }
+  ]
+}

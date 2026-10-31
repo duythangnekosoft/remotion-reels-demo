@@ -11,7 +11,6 @@ import {
 } from "remotion";
 import { BibleQuizQuestion } from "./BibleQuizQuestion";
 import { BIBLE_EPISODES } from "../data/bibleEpisodes";
-import { StudioBilingualBadge } from "../components/StudioBilingualBadge";
 import { getQuizTiming } from "../data/timelineUtils";
 
 export const BibleQuizComposition: React.FC<{ episode?: number }> = ({
@@ -40,13 +39,7 @@ export const BibleQuizComposition: React.FC<{ episode?: number }> = ({
         overflow: "hidden",
       }}
     >
-      <StudioBilingualBadge
-        topicEn="Bible & Scripture Trivia"
-        topicVn="Đố Vui Kinh Thánh & Điển Tích Cổ"
-        epNumber={episode}
-        epTitleEn={currentEpisode.title}
-      />
-
+      
       {/* Background Music Loop */}
       <Audio src={staticFile("audio/bgm_loop.wav")} loop volume={0.15} />
 

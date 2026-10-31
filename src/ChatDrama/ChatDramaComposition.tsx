@@ -12,7 +12,6 @@ import {
 } from "remotion";
 import { CHAT_DRAMA_EPISODES } from "../data/chatDramaEpisodes";
 import { MessageBubble } from "./iMessageBubble";
-import { StudioBilingualBadge } from "../components/StudioBilingualBadge";
 import { getChatDramaTiming, getChatDramaDuration } from "../data/timelineUtils";
 
 export { getChatDramaDuration };
@@ -80,13 +79,7 @@ export const ChatDramaComposition: React.FC<{ episode?: number }> = ({
         overflow: "hidden",
       }}
     >
-      <StudioBilingualBadge
-        topicEn="Fake iMessage Drama / AITAH"
-        topicVn="Kịch Bản Tin Nhắn Drama Tâm Sự AITAH"
-        epNumber={episode}
-        epTitleEn={story.title}
-      />
-
+      
       {/* Background Ambience Audio */}
       <Audio src={staticFile("audio/bgm_loop.wav")} loop volume={0.08} />
 

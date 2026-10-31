@@ -156,3 +156,37 @@ export function getChatDramaTiming(episodeNumber: number): ChatDramaTiming {
 export function getChatDramaDuration(episodeNumber: number): number {
   return getChatDramaTiming(episodeNumber).totalDuration;
 }
+
+
+// Marble Race, Territory, Plinko, and Would You Rather durations
+const MARBLE_DURATIONS: Record<number, number> = {
+  1: 1209,
+  2: 983,
+  3: 938,
+  4: 918,
+  5: 1151,
+};
+
+export function getMarbleRaceDuration(episode: number): number {
+  return MARBLE_DURATIONS[episode] || 1080;
+}
+
+export function getTerritoryDuration(episode: number): number {
+  return 1080; // 36.0s @ 30fps
+}
+
+const PLINKO_DURATIONS: Record<number, number> = {
+  1: 998,
+  2: 920,
+  3: 1034,
+  4: 964,
+  5: 994,
+};
+
+export function getPlinkoDuration(episode: number): number {
+  return PLINKO_DURATIONS[episode] || 1050;
+}
+
+export function getWouldYouRatherDuration(episode: number): number {
+  return 990; // 33.0s @ 30fps
+}

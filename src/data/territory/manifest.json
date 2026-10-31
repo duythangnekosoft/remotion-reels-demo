@@ -1,0 +1,47 @@
+[
+  {
+    "episode": 1,
+    "id": "Territory-Ep1",
+    "duration": 36,
+    "totalFrames": 1080,
+    "winner": "Crimson Blaze",
+    "color": "#ff0055",
+    "conquestSec": "31.0"
+  },
+  {
+    "episode": 2,
+    "id": "Territory-Ep2",
+    "duration": 36,
+    "totalFrames": 1080,
+    "winner": "Neon Cyan",
+    "color": "#00f5d4",
+    "conquestSec": "31.0"
+  },
+  {
+    "episode": 3,
+    "id": "Territory-Ep3",
+    "duration": 36,
+    "totalFrames": 1080,
+    "winner": "Solar Gold",
+    "color": "#ffd166",
+    "conquestSec": "31.0"
+  },
+  {
+    "episode": 4,
+    "id": "Territory-Ep4",
+    "duration": 36,
+    "totalFrames": 1080,
+    "winner": "Cyber Violet",
+    "color": "#9d4edd",
+    "conquestSec": "31.0"
+  },
+  {
+    "episode": 5,
+    "id": "Territory-Ep5",
+    "duration": 36,
+    "totalFrames": 1080,
+    "winner": "Crimson Blaze",
+    "color": "#ff0055",
+    "conquestSec": "31.0"
+  }
+]

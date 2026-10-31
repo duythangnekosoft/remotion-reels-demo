@@ -9,242 +9,258 @@ import { BibleQuizComposition } from "./BibleQuiz/BibleQuizComposition";
 import { NostalgiaQuizComposition } from "./NostalgiaQuiz/NostalgiaQuizComposition";
 import { CrazyLawsComposition } from "./CrazyLawsQuiz/CrazyLawsComposition";
 import { ChatDramaComposition } from "./ChatDrama/ChatDramaComposition";
-import { SingularitySiegeComposition, getSingularityDuration } from "./SingularitySiege/SingularitySiegeComposition";
 import { LastMarbleComposition, LAST_MARBLE_DURATION } from "./LastMarble/LastMarbleComposition";
 import { LastMarbleThumbnail } from "./LastMarble/LastMarbleThumbnail";
+import { NeonBloomComposition } from "./KineticStudies/NeonBloomComposition";
+import { BuildBattleComposition } from "./KineticStudies/BuildBattleComposition";
+import { BrickBreakerComposition } from "./KineticStudies/BrickBreakerComposition";
+import { MarbleRaceComposition } from "./MarbleRace/MarbleRaceComposition";
+import { TerritoryComposition } from "./TerritoryConquest/TerritoryComposition";
+import { PlinkoComposition } from "./Plinko/PlinkoComposition";
+import { WouldYouRatherComposition } from "./WouldYouRather/WouldYouRatherComposition";
 import {
   getGeographyDuration,
   getBibleDuration,
   getNostalgiaDuration,
   getCrazyLawsDuration,
   getChatDramaDuration,
+  getMarbleRaceDuration,
+  getTerritoryDuration,
+  getPlinkoDuration,
+  getWouldYouRatherDuration,
 } from "./data/timelineUtils";
 
 export const RemotionRoot: React.FC = () => {
-  const episodes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
   return (
     <>
       {/* ========================================================
-          TOPIC 1: BIBLE & ANCIENT SCRIPTURE TRIVIA (10 EPISODES)
+          01. MARBLE RACE GRAND PRIX (40.3s)
          ======================================================== */}
-      <Folder name="01-Bible-KinhThanh">
-        <Composition
-          id="BibleTriviaQuiz-KinhThanh"
-          component={BibleQuizComposition}
-          durationInFrames={getBibleDuration(1)}
-          fps={30}
-          width={1080}
-          height={1920}
-          defaultProps={{ episode: 1 }}
-        />
-        {episodes.map((ep) => (
+        <Folder name="01-Marble-Race">
           <Composition
-            key={`BibleQuiz-Ep${ep}-Tap${ep}`}
-            id={`BibleQuiz-Ep${ep}-Tap${ep}`}
-            component={BibleQuizComposition}
-            durationInFrames={getBibleDuration(ep)}
+            id="MarbleRace-GrandPrix"
+            component={MarbleRaceComposition}
+            durationInFrames={getMarbleRaceDuration(1)}
             fps={30}
             width={1080}
             height={1920}
-            defaultProps={{ episode: ep }}
+            defaultProps={{ episode: 1 }}
           />
-        ))}
-      </Folder>
+        </Folder>
 
-      {/* ========================================================
-          TOPIC 2: 80s & 90s NOSTALGIA QUIZ (10 EPISODES)
+        {/* ========================================================
+          02. TERRITORY CONQUEST (36.0s - 100% DOMINATION)
          ======================================================== */}
-      <Folder name="02-Nostalgia-HoaiNiem-80s90s">
-        <Composition
-          id="NostalgiaQuiz-HoaiNiem"
-          component={NostalgiaQuizComposition}
-          durationInFrames={getNostalgiaDuration(1)}
-          fps={30}
-          width={1080}
-          height={1920}
-          defaultProps={{ episode: 1 }}
-        />
-        {episodes.map((ep) => (
-          <Composition
-            key={`NostalgiaQuiz-Ep${ep}-Tap${ep}`}
-            id={`NostalgiaQuiz-Ep${ep}-Tap${ep}`}
-            component={NostalgiaQuizComposition}
-            durationInFrames={getNostalgiaDuration(ep)}
-            fps={30}
-            width={1080}
-            height={1920}
-            defaultProps={{ episode: ep }}
-          />
-        ))}
-      </Folder>
+          <Folder name="02-Territory-Conquest">
+            <Composition
+              id="Territory-Domination"
+              component={TerritoryComposition}
+              durationInFrames={getTerritoryDuration(1)}
+              fps={30}
+              width={1080}
+              height={1920}
+              defaultProps={{ episode: 1 }}
+            />
+          </Folder>
 
-      {/* ========================================================
-          TOPIC 3: US STATE SECRETS & CRAZY LAWS (10 EPISODES)
+          {/* ========================================================
+          03. LUCKY PLINKO $1M ASMR DROP (33.3s)
          ======================================================== */}
-      <Folder name="03-CrazyLaws-LuatKyQuac">
-        <Composition
-          id="CrazyLawsQuiz-LuatKyQuac"
-          component={CrazyLawsComposition}
-          durationInFrames={getCrazyLawsDuration(1)}
-          fps={30}
-          width={1080}
-          height={1920}
-          defaultProps={{ episode: 1 }}
-        />
-        {episodes.map((ep) => (
-          <Composition
-            key={`CrazyLaws-Ep${ep}-Tap${ep}`}
-            id={`CrazyLaws-Ep${ep}-Tap${ep}`}
-            component={CrazyLawsComposition}
-            durationInFrames={getCrazyLawsDuration(ep)}
-            fps={30}
-            width={1080}
-            height={1920}
-            defaultProps={{ episode: ep }}
-          />
-        ))}
-      </Folder>
+            <Folder name="03-Plinko-ASMR">
+              <Composition
+                id="Plinko-FortuneDrop"
+                component={PlinkoComposition}
+                durationInFrames={getPlinkoDuration(1)}
+                fps={30}
+                width={1080}
+                height={1920}
+                defaultProps={{ episode: 1 }}
+              />
+            </Folder>
 
-      {/* ========================================================
-          TOPIC 4: US GEOGRAPHY & AMERICAN IQ (10 EPISODES)
+            {/* ========================================================
+          04. WOULD YOU RATHER SHOWDOWN (33.0s)
          ======================================================== */}
-      <Folder name="04-Geography-DiaLyMy">
-        <Composition
-          id="USGeographyQuiz-DiaLyMy"
-          component={QuizComposition}
-          durationInFrames={getGeographyDuration(1)}
-          fps={30}
-          width={1080}
-          height={1920}
-          defaultProps={{ episode: 1 }}
-        />
-        {episodes.map((ep) => (
-          <Composition
-            key={`GeographyQuiz-Ep${ep}-Tap${ep}`}
-            id={`GeographyQuiz-Ep${ep}-Tap${ep}`}
-            component={QuizComposition}
-            durationInFrames={getGeographyDuration(ep)}
-            fps={30}
-            width={1080}
-            height={1920}
-            defaultProps={{ episode: ep }}
-          />
-        ))}
-      </Folder>
+              <Folder name="04-Would-You-Rather">
+                <Composition
+                  id="WouldYouRather-Showdown"
+                  component={WouldYouRatherComposition}
+                  durationInFrames={getWouldYouRatherDuration(1)}
+                  fps={30}
+                  width={1080}
+                  height={1920}
+                  defaultProps={{ episode: 1 }}
+                />
+              </Folder>
 
-      {/* ========================================================
-          TOPIC 5: FAKE iMESSAGE / AITAH DRAMA (10 EPISODES)
+              {/* ========================================================
+          05. THE LAST MARBLE - MECHANICAL ASMR (45.0s)
          ======================================================== */}
-      <Folder name="05-ChatDrama-TamSuAITAH">
-        <Composition
-          id="ChatDramaStory-TamSuAITAH"
-          component={ChatDramaComposition}
-          durationInFrames={getChatDramaDuration(1)}
-          fps={30}
-          width={1080}
-          height={1920}
-          defaultProps={{ episode: 1 }}
-        />
-        {episodes.map((ep) => (
-          <Composition
-            key={`ChatDrama-Ep${ep}-Tap${ep}`}
-            id={`ChatDrama-Ep${ep}-Tap${ep}`}
-            component={ChatDramaComposition}
-            durationInFrames={getChatDramaDuration(ep)}
-            fps={30}
-            width={1080}
-            height={1920}
-            defaultProps={{ episode: ep }}
-          />
-        ))}
-      </Folder>
+                <Folder name="05-Last-Marble">
+                  <Composition
+                    id="LastMarble-MechanicalASMR"
+                    component={LastMarbleComposition}
+                    durationInFrames={LAST_MARBLE_DURATION}
+                    fps={30}
+                    width={1080}
+                    height={1920}
+                  />
+                  <Composition
+                    id="LastMarble-Thumbnail"
+                    component={LastMarbleThumbnail}
+                    durationInFrames={30}
+                    fps={30}
+                    width={1080}
+                    height={1920}
+                  />
+                </Folder>
 
-      {/* ========================================================
-          TOPIC 6: KINETIC ASMR SINGULARITY SIEGE & THE LAST MARBLE
+                {/* ========================================================
+          06. KINETIC DUEL & ARENA GAMES (35s - 56s)
          ======================================================== */}
-      <Folder name="06-Singularity-VatLyASMR">
-        {/* NEW STANDALONE ASMR MASTERPIECE: THE LAST MARBLE */}
-        <Composition
-          id="LastMarble-MechanicalASMR"
-          component={LastMarbleComposition}
-          durationInFrames={LAST_MARBLE_DURATION}
-          fps={30}
-          width={1080}
-          height={1920}
-        />
-        <Composition
-          id="LastMarble-Thumbnail"
-          component={LastMarbleThumbnail}
-          durationInFrames={30}
-          fps={30}
-          width={1080}
-          height={1920}
-        />
-        <Composition
-          id="SingularitySiege-VatLyASMR"
-          component={SingularitySiegeComposition}
-          durationInFrames={getSingularityDuration(1)}
-          fps={30}
-          width={1080}
-          height={1920}
-          defaultProps={{ episode: 1 }}
-        />
-        {episodes.map((ep) => (
-          <Composition
-            key={`SingularitySiege-Ep${ep}-Tap${ep}`}
-            id={`SingularitySiege-Ep${ep}-Tap${ep}`}
-            component={SingularitySiegeComposition}
-            durationInFrames={getSingularityDuration(ep)}
-            fps={30}
-            width={1080}
-            height={1920}
-            defaultProps={{ episode: ep }}
-          />
-        ))}
-      </Folder>
+                  <Folder name="06-Kinetic-Games">
+                    <Composition
+                      id="Kinetic-BrickBreaker-1K"
+                      component={BrickBreakerComposition}
+                      durationInFrames={1680}
+                      fps={30}
+                      width={720}
+                      height={1280}
+                    />
+                    <Composition
+                      id="Kinetic-BuildBattle-35s"
+                      component={BuildBattleComposition}
+                      durationInFrames={1081}
+                      fps={30}
+                      width={720}
+                      height={1280}
+                    />
+                    <Composition
+                      id="Kinetic-NeonBloom-35s"
+                      component={NeonBloomComposition}
+                      durationInFrames={1050}
+                      fps={30}
+                      width={720}
+                      height={1280}
+                    />
+                  </Folder>
 
-      {/* ========================================================
-          TOPIC 7: DATA / BAR CHART RACES & THUMBNAILS
+                  {/* ========================================================
+          07. DATA / BAR CHART RACES (35.0s)
          ======================================================== */}
-      <Folder name="07-DataRaces-DuaTopSoLieu">
-        <Composition
-          id="BarChartRaceTech-CongNghe"
-          component={BarChartRaceComposition}
-          durationInFrames={600}
-          fps={30}
-          width={1080}
-          height={1920}
-          defaultProps={{}}
-        />
-        <Composition
-          id="BarChartRaceThumbnail-Thumb"
-          component={BarChartRaceThumbnail}
-          durationInFrames={30}
-          fps={30}
-          width={1080}
-          height={1920}
-          defaultProps={{}}
-        />
-        <Composition
-          id="BillionairesRace-TyPhu"
-          component={BillionairesRaceComposition}
-          durationInFrames={600}
-          fps={30}
-          width={1080}
-          height={1920}
-          defaultProps={{}}
-        />
-        <Composition
-          id="BillionairesThumbnail-Thumb"
-          component={BillionairesThumbnail}
-          durationInFrames={30}
-          fps={30}
-          width={1080}
-          height={1920}
-          defaultProps={{}}
-        />
-      </Folder>
-    </>
-  );
+                  <Folder name="07-Data-Races">
+                    <Composition
+                      id="BarChartRaceTech"
+                      component={BarChartRaceComposition}
+                      durationInFrames={1050}
+                      fps={30}
+                      width={1080}
+                      height={1920}
+                      defaultProps={{}}
+                    />
+                    <Composition
+                      id="BarChartRaceThumbnail-Thumb"
+                      component={BarChartRaceThumbnail}
+                      durationInFrames={30}
+                      fps={30}
+                      width={1080}
+                      height={1920}
+                      defaultProps={{}}
+                    />
+                    <Composition
+                      id="BillionairesRace"
+                      component={BillionairesRaceComposition}
+                      durationInFrames={1050}
+                      fps={30}
+                      width={1080}
+                      height={1920}
+                      defaultProps={{}}
+                    />
+                    <Composition
+                      id="BillionairesThumbnail-Thumb"
+                      component={BillionairesThumbnail}
+                      durationInFrames={30}
+                      fps={30}
+                      width={1080}
+                      height={1920}
+                      defaultProps={{}}
+                    />
+                  </Folder>
+
+                  {/* ========================================================
+          08. FAKE iMESSAGE CHAT DRAMA / AITAH (67.0s)
+         ======================================================== */}
+                    <Folder name="08-AITAH-Chat-Drama">
+                      <Composition
+                        id="ChatDramaStory"
+                        component={ChatDramaComposition}
+                        durationInFrames={getChatDramaDuration(1)}
+                        fps={30}
+                        width={1080}
+                        height={1920}
+                        defaultProps={{ episode: 1 }}
+                      />
+                    </Folder>
+
+                    {/* ========================================================
+          09. BIBLE & SCRIPTURE TRIVIA (101.2s)
+         ======================================================== */}
+                      <Folder name="09-Bible-Trivia">
+                        <Composition
+                          id="BibleTriviaQuiz"
+                          component={BibleQuizComposition}
+                          durationInFrames={getBibleDuration(1)}
+                          fps={30}
+                          width={1080}
+                          height={1920}
+                          defaultProps={{ episode: 1 }}
+                        />
+                      </Folder>
+
+                      {/* ========================================================
+          10. 80s & 90s AMERICAN NOSTALGIA QUIZ (103.6s)
+         ======================================================== */}
+                        <Folder name="10-80s-90s-Nostalgia">
+                          <Composition
+                            id="NostalgiaQuiz"
+                            component={NostalgiaQuizComposition}
+                            durationInFrames={getNostalgiaDuration(1)}
+                            fps={30}
+                            width={1080}
+                            height={1920}
+                            defaultProps={{ episode: 1 }}
+                          />
+                        </Folder>
+
+                        {/* ========================================================
+          11. US STATE SECRETS & CRAZY LAWS (103.8s)
+         ======================================================== */}
+                          <Folder name="11-US-Crazy-Laws">
+                            <Composition
+                              id="CrazyLawsQuiz"
+                              component={CrazyLawsComposition}
+                              durationInFrames={getCrazyLawsDuration(1)}
+                              fps={30}
+                              width={1080}
+                              height={1920}
+                              defaultProps={{ episode: 1 }}
+                            />
+                          </Folder>
+
+                          {/* ========================================================
+          12. US GEOGRAPHY & AMERICAN IQ QUIZ (101.1s)
+         ======================================================== */}
+                            <Folder name="12-US-Geography-IQ">
+                              <Composition
+                                id="USGeographyQuiz"
+                                component={QuizComposition}
+                                durationInFrames={getGeographyDuration(1)}
+                                fps={30}
+                                width={1080}
+                                height={1920}
+                                defaultProps={{ episode: 1 }}
+                              />
+                            </Folder>
+                          </>
+                          );
 };

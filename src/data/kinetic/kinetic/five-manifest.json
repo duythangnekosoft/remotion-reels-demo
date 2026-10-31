@@ -1,0 +1,85 @@
+[
+  {
+    "id": "HeartBloom",
+    "kind": "heart",
+    "title": "HEART BLOOM",
+    "frames": 449,
+    "finishFrame": 376,
+    "duration": 14.966666666666667,
+    "events": 208,
+    "result": {
+      "totalCells": 1001,
+      "lit": 1001,
+      "balls": 209,
+      "goal": "all cells lit"
+    }
+  },
+  {
+    "id": "OrbitBloom",
+    "kind": "orbit",
+    "title": "ORBIT BLOOM",
+    "frames": 451,
+    "finishFrame": 378,
+    "duration": 15.033333333333333,
+    "events": 428,
+    "result": {
+      "totalCells": 1456,
+      "lit": 1456,
+      "balls": 429,
+      "goal": "all cells lit"
+    }
+  },
+  {
+    "id": "RingRivals",
+    "kind": "rings",
+    "title": "RING RIVALS",
+    "frames": 670,
+    "finishFrame": 594,
+    "duration": 22.333333333333332,
+    "events": 83,
+    "result": {
+      "score": [
+        40,
+        43
+      ],
+      "rings": 83,
+      "remainingRadius": 8.700000000000264,
+      "goal": "arena closed",
+      "winner": "BLUE"
+    }
+  },
+  {
+    "id": "SquareRivals",
+    "kind": "square",
+    "title": "SQUARE RIVALS",
+    "frames": 569,
+    "finishFrame": 493,
+    "duration": 18.966666666666665,
+    "events": 92,
+    "result": {
+      "score": [
+        46,
+        46
+      ],
+      "rings": 92,
+      "remainingRadius": 8.399999999999533,
+      "goal": "arena closed",
+      "winner": "TIE"
+    }
+  },
+  {
+    "id": "PrismCollapse",
+    "kind": "brick",
+    "title": "PRISM COLLAPSE",
+    "frames": 424,
+    "finishFrame": 348,
+    "duration": 14.133333333333333,
+    "events": 796,
+    "result": {
+      "totalBricks": 796,
+      "remaining": 0,
+      "balls": 797,
+      "goal": "all bricks destroyed"
+    }
+  }
+]

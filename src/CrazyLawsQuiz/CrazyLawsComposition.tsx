@@ -11,7 +11,6 @@ import {
 } from "remotion";
 import { CrazyLawsQuestion } from "./CrazyLawsQuestion";
 import { CRAZY_LAWS_EPISODES } from "../data/crazyLawsEpisodes";
-import { StudioBilingualBadge } from "../components/StudioBilingualBadge";
 import { getQuizTiming } from "../data/timelineUtils";
 
 export const CrazyLawsComposition: React.FC<{ episode?: number }> = ({
@@ -38,13 +37,7 @@ export const CrazyLawsComposition: React.FC<{ episode?: number }> = ({
         overflow: "hidden",
       }}
     >
-      <StudioBilingualBadge
-        topicEn="Crazy State Laws & Secrets"
-        topicVn="Luật Kỳ Quặc & Bí Mật Tiểu Bang Mỹ"
-        epNumber={episode}
-        epTitleEn={currentEpisode.title}
-      />
-
+      
       {/* Background Music Loop */}
       <Audio src={staticFile("audio/bgm_loop.wav")} loop volume={0.16} />
 

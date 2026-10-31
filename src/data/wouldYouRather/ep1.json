@@ -1,0 +1,165 @@
+{
+  "episode": 1,
+  "title": "Superpowers Dilemma",
+  "secondsPerDilemma": 11,
+  "framesPerDilemma": 330,
+  "totalFrames": 990,
+  "duration": 33,
+  "dilemmas": [
+    {
+      "question": "WHICH POWER DO YOU CHOOSE?",
+      "optionA": {
+        "text": "FLY ANYWHERE AT SPEED OF SOUND",
+        "emoji": "🦅",
+        "pct": 64
+      },
+      "optionB": {
+        "text": "TELEPORT INSTANTLY TO ANY LOCATION",
+        "emoji": "⚡",
+        "pct": 36
+      }
+    },
+    {
+      "question": "THE LANGUAGE SHOWDOWN",
+      "optionA": {
+        "text": "SPEAK EVERY HUMAN LANGUAGE FLUENTLY",
+        "emoji": "🗣️",
+        "pct": 72
+      },
+      "optionB": {
+        "text": "COMMUNICATE WITH ALL ANIMALS",
+        "emoji": "🐾",
+        "pct": 28
+      }
+    },
+    {
+      "question": "ULTIMATE MIND MASTERY",
+      "optionA": {
+        "text": "READ ANYONE'S MIND ON COMMAND",
+        "emoji": "🧠",
+        "pct": 41
+      },
+      "optionB": {
+        "text": "INVISIBILITY WHENEVER YOU WANT",
+        "emoji": "👻",
+        "pct": 59
+      }
+    }
+  ],
+  "events": [
+    {
+      "t": 2,
+      "type": "tick",
+      "count": 5,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 3,
+      "type": "tick",
+      "count": 4,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 4,
+      "type": "tick",
+      "count": 3,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 5,
+      "type": "tick",
+      "count": 2,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 6,
+      "type": "tick",
+      "count": 1,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 7.5,
+      "type": "reveal",
+      "dilemmaIdx": 0,
+      "winner": "A",
+      "pctA": 64,
+      "pctB": 36
+    },
+    {
+      "t": 13,
+      "type": "tick",
+      "count": 5,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 14,
+      "type": "tick",
+      "count": 4,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 15,
+      "type": "tick",
+      "count": 3,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 16,
+      "type": "tick",
+      "count": 2,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 17,
+      "type": "tick",
+      "count": 1,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 18.5,
+      "type": "reveal",
+      "dilemmaIdx": 1,
+      "winner": "A",
+      "pctA": 72,
+      "pctB": 28
+    },
+    {
+      "t": 24,
+      "type": "tick",
+      "count": 5,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 25,
+      "type": "tick",
+      "count": 4,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 26,
+      "type": "tick",
+      "count": 3,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 27,
+      "type": "tick",
+      "count": 2,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 28,
+      "type": "tick",
+      "count": 1,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 29.5,
+      "type": "reveal",
+      "dilemmaIdx": 2,
+      "winner": "B",
+      "pctA": 41,
+      "pctB": 59
+    }
+  ]
+}

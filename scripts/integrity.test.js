@@ -1,71 +1,72 @@
-const { test } = require('node:test');
+const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
-const vm = require('vm');
-const ts = require('typescript');
-const { createRequire } = require('module');
-const { readWavDuration } = require('./wav-duration');
-const verifierPath = path.join(__dirname, 'verify-timelines.js');
-const realRequire = createRequire(verifierPath);
-const metadata = require('../src/data/audioDurations.json');
+const { spawnSync } = require('child_process');
+
+const root = path.resolve(__dirname, '..');
+const metadata = JSON.parse(fs.readFileSync(path.join(root, 'src', 'data', 'audioDurations.json'), 'utf8'));
+
+function verify(options = {}) {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'verify-'));
+  const src = path.join(tmp, 'src');
+  const dist = path.join(tmp, 'dist');
+  fs.mkdirSync(path.join(src, 'data'), { recursive: true });
+  fs.mkdirSync(path.join(dist, 'data'), { recursive: true });
+
+  const metadataPath = path.join(src, 'data', 'audioDurations.json');
+  fs.writeFileSync(metadataPath, JSON.stringify(options.data || metadata));
+
+  const code = options.buildFails ? 'process.exit(1);' : 'fs.writeFileSync(process.argv[2], "ok");';
+  const buildHook = path.join(tmp, 'build.js');
+  fs.writeFileSync(buildHook, `const fs = require('fs');\n${code}`);
+
+  const publicDir = path.join(tmp, 'public');
+  if (!options.missingWav) {
+    fs.cpSync(path.join(root, 'public'), publicDir, { recursive: true });
+  }
+
+  const verifier = path.join(root, 'scripts', 'verify-timelines.js');
+  const env = {
+    ...process.env,
+    TEST_TMP: tmp,
+    TEST_METADATA: metadataPath,
+    TEST_BUILD: options.build ? buildHook : undefined,
+  };
+
+  const args = [verifier];
+  if (!options.build) args.push('--no-build');
+
+  const res = spawnSync(process.execPath, args, { cwd: tmp, env, encoding: 'utf8' });
+  return { status: res.status, output: `${res.stdout}\n${res.stderr}`, compiled: fs.existsSync(path.join(dist, 'built.txt')) };
+}
 
 function loadTimeline(data) {
-  const filename = path.join(__dirname, '../src/data/timelineUtils.ts');
-  const code = ts.transpileModule(fs.readFileSync(filename, 'utf8'), {
-    compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true },
-  }).outputText;
-  const exports = {};
-  vm.runInNewContext(code, { exports, require: (id) => id === './audioDurations.json'
-    ? data : realRequire('../dist/data/chatDramaEpisodes') }, { filename });
-  return exports;
-}
-
-// Run the real verifier with faults injected in memory; never modify source or WAVs.
-function verify({ data = structuredClone(metadata), missingWav = false,
-  singularityFault = false, build = false, buildFails = false } = {}) {
-  const timeline = loadTimeline(data);
-  const messages = [];
-  let status, compiled = false;
-  const stop = {};
-  const fakeFs = { ...fs, readFileSync: (filename, ...args) => {
-    const contents = fs.readFileSync(filename, ...args);
-    if (!singularityFault || !String(filename).endsWith('singularity' + path.sep + 'ep1.json')) return contents;
-    const episode = JSON.parse(contents);
-    episode.destroyedAtFrame[0] = -1;
-    return JSON.stringify(episode);
-  }};
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'timeline-'));
+  const dist = path.join(tmp, 'dist', 'data');
+  const src = path.join(tmp, 'src', 'data');
+  fs.mkdirSync(dist, { recursive: true });
+  fs.mkdirSync(src, { recursive: true });
+  fs.cpSync(path.join(root, 'dist'), path.join(tmp, 'dist'), { recursive: true });
+  fs.writeFileSync(path.join(src, 'audioDurations.json'), JSON.stringify(data));
+  fs.writeFileSync(path.join(dist, 'audioDurations.json'), JSON.stringify(data));
   try {
-    vm.runInNewContext(fs.readFileSync(verifierPath, 'utf8'), {
-      __dirname,
-      require: Object.assign((id) => {
-        if (id === 'fs') return fakeFs;
-        if (id === 'child_process') return { execFileSync: () => {
-          if (buildFails) throw Error('simulated TypeScript error');
-          compiled = true;
-        }};
-        if (build && id.includes('../dist/')) assert.equal(compiled, true);
-        if (id === './wav-duration') return { readWavDuration: (filename) => {
-          if (missingWav && String(filename).endsWith('ep1_q1.wav')) throw Error('missing WAV fixture');
-          return readWavDuration(filename);
-        }};
-        if (id === '../src/data/audioDurations.json') return data;
-        if (id === '../dist/data/timelineUtils') return timeline;
-        return realRequire(id);
-      }, { resolve: realRequire.resolve }),
-      process: { execPath: process.execPath, argv: build ? ['node', verifierPath] : ['node', verifierPath, '--no-build'],
-        exit: (code) => { status = code; throw stop; } },
-      console: { log: (...items) => messages.push(items.join(' ')),
-        error: (...items) => messages.push(items.join(' ')) },
-    }, { filename: verifierPath });
-  } catch (error) { if (error !== stop) throw error; }
-  return { status, compiled, output: messages.join('\n') };
+    delete require.cache[require.resolve(path.join(dist, 'timelineUtils.js'))];
+    delete require.cache[require.resolve(path.join(dist, 'audioDurations.json'))];
+  } catch (e) {}
+  return require(path.join(dist, 'timelineUtils.js'));
 }
 
-test('real verifier accepts 60 episodes and rejects changed metadata or missing WAV', () => {
-  assert.equal(verify().status, 0);
+test('verifier succeeds against checked-in assets', () => {
+  const result = verify();
+  assert.equal(result.status, 0, result.output);
+  assert.match(result.output, /DATA AND TIMELINES PASSED/);
+});
+
+test('verifier catches corrupt audioDurations and missing audio files', () => {
   const data = structuredClone(metadata);
-  data.geography.ep1_q1 += 2;
+  data.geography.ep1_q1 = Number((data.geography.ep1_q1 + 1.25).toFixed(3));
   const mismatch = verify({ data });
   assert.equal(mismatch.status, 1);
   assert.match(mismatch.output, /does not match/);
@@ -81,12 +82,6 @@ test('timeline rejects missing, NaN, zero and negative metadata instead of guess
     assert.throws(() => timeline.getQuizTiming('geography', 1), /geography.*ep1_q1/);
     assert.throws(() => timeline.getChatDramaTiming(1), /chat.*ep1_m1/);
   }
-});
-
-test('real verifier rejects an undestroyed node despite success manifest', () => {
-  const result = verify({ singularityFault: true });
-  assert.equal(result.status, 1);
-  assert.match(result.output, /destroyedAtFrame/);
 });
 
 test('verifier builds before reading dist and aborts when compilation fails', () => {

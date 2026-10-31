@@ -11,7 +11,6 @@ import {
 } from "remotion";
 import { QuizQuestion } from "./QuizQuestion";
 import { GEOGRAPHY_EPISODES } from "../data/geographyEpisodes";
-import { StudioBilingualBadge } from "../components/StudioBilingualBadge";
 import { getQuizTiming } from "../data/timelineUtils";
 
 export const QuizComposition: React.FC<{ episode?: number }> = ({
@@ -42,13 +41,7 @@ export const QuizComposition: React.FC<{ episode?: number }> = ({
         overflow: "hidden",
       }}
     >
-      <StudioBilingualBadge
-        topicEn="US Geography & American IQ"
-        topicVn="Đố Vui Địa Lý Nước Mỹ & IQ"
-        epNumber={episode}
-        epTitleEn={currentEpisode.title}
-      />
-
+      
       {/* Background Music Loop */}
       <Audio src={staticFile("audio/bgm_loop.wav")} loop volume={0.16} />
       {/* Ambient background glowing orbs */}

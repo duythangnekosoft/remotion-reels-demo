@@ -1,0 +1,47 @@
+[
+  {
+    "episode": 1,
+    "id": "MarbleRace-Ep1",
+    "duration": 40.3,
+    "totalFrames": 1209,
+    "winner": "Ultra Violet",
+    "color": "#9b5de5",
+    "finishSec": "34.3"
+  },
+  {
+    "episode": 2,
+    "id": "MarbleRace-Ep2",
+    "duration": 32.77,
+    "totalFrames": 983,
+    "winner": "Golden Star",
+    "color": "#ffb703",
+    "finishSec": "26.8"
+  },
+  {
+    "episode": 3,
+    "id": "MarbleRace-Ep3",
+    "duration": 31.27,
+    "totalFrames": 938,
+    "winner": "Neon Emerald",
+    "color": "#00f5d4",
+    "finishSec": "25.3"
+  },
+  {
+    "episode": 4,
+    "id": "MarbleRace-Ep4",
+    "duration": 30.6,
+    "totalFrames": 918,
+    "winner": "Golden Star",
+    "color": "#ffb703",
+    "finishSec": "24.6"
+  },
+  {
+    "episode": 5,
+    "id": "MarbleRace-Ep5",
+    "duration": 38.37,
+    "totalFrames": 1151,
+    "winner": "Solar Flare",
+    "color": "#fb5607",
+    "finishSec": "32.4"
+  }
+]

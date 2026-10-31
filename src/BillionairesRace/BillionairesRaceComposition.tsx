@@ -14,7 +14,6 @@ import {
   BILLIONAIRE_MILESTONES,
 } from "./billionairesData";
 import { BillionairesAvatar } from "./BillionairesAvatar";
-import { StudioBilingualBadge } from "../components/StudioBilingualBadge";
 
 function getNetWorthAtYear(
   history: { year: number; netWorth: number }[],
@@ -86,11 +85,7 @@ export const BillionairesRaceComposition: React.FC = () => {
         overflow: "hidden",
       }}
     >
-      <StudioBilingualBadge
-        topicEn="Top 10 World Billionaires Race"
-        topicVn="Đua Top Tỷ Phú Giàu Nhất Thế Giới (2000-2026)"
-      />
-
+      
       {/* Audio Layer */}
       <Audio src={staticFile("audio/bgm_loop.wav")} loop volume={0.2} />
 

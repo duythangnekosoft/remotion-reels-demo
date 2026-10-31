@@ -1,0 +1,165 @@
+{
+  "episode": 2,
+  "title": "Wealth & Lifestyle",
+  "secondsPerDilemma": 11,
+  "framesPerDilemma": 330,
+  "totalFrames": 990,
+  "duration": 33,
+  "dilemmas": [
+    {
+      "question": "MONEY OR FREEDOM?",
+      "optionA": {
+        "text": "$10,000,000 CASH RIGHT NOW",
+        "emoji": "💰",
+        "pct": 54
+      },
+      "optionB": {
+        "text": "$10,000 EVERY SINGLE DAY FOR LIFE",
+        "emoji": "📈",
+        "pct": 46
+      }
+    },
+    {
+      "question": "HUMAN LIMITS",
+      "optionA": {
+        "text": "NEVER FEEL TIRED OR NEED SLEEP",
+        "emoji": "⚡",
+        "pct": 68
+      },
+      "optionB": {
+        "text": "NEVER CATCH A COLD OR ILLNESS",
+        "emoji": "🛡️",
+        "pct": 32
+      }
+    },
+    {
+      "question": "TIME TRAVEL CAREER",
+      "optionA": {
+        "text": "BILLIONAIRE IN THE YEAR 1850",
+        "emoji": "🏰",
+        "pct": 23
+      },
+      "optionB": {
+        "text": "AVERAGE WORKER IN THE YEAR 3000",
+        "emoji": "🚀",
+        "pct": 77
+      }
+    }
+  ],
+  "events": [
+    {
+      "t": 2,
+      "type": "tick",
+      "count": 5,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 3,
+      "type": "tick",
+      "count": 4,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 4,
+      "type": "tick",
+      "count": 3,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 5,
+      "type": "tick",
+      "count": 2,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 6,
+      "type": "tick",
+      "count": 1,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 7.5,
+      "type": "reveal",
+      "dilemmaIdx": 0,
+      "winner": "A",
+      "pctA": 54,
+      "pctB": 46
+    },
+    {
+      "t": 13,
+      "type": "tick",
+      "count": 5,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 14,
+      "type": "tick",
+      "count": 4,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 15,
+      "type": "tick",
+      "count": 3,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 16,
+      "type": "tick",
+      "count": 2,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 17,
+      "type": "tick",
+      "count": 1,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 18.5,
+      "type": "reveal",
+      "dilemmaIdx": 1,
+      "winner": "A",
+      "pctA": 68,
+      "pctB": 32
+    },
+    {
+      "t": 24,
+      "type": "tick",
+      "count": 5,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 25,
+      "type": "tick",
+      "count": 4,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 26,
+      "type": "tick",
+      "count": 3,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 27,
+      "type": "tick",
+      "count": 2,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 28,
+      "type": "tick",
+      "count": 1,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 29.5,
+      "type": "reveal",
+      "dilemmaIdx": 2,
+      "winner": "B",
+      "pctA": 23,
+      "pctB": 77
+    }
+  ]
+}

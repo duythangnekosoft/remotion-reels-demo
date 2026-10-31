@@ -1,0 +1,165 @@
+{
+  "episode": 4,
+  "title": "Future & Technology",
+  "secondsPerDilemma": 11,
+  "framesPerDilemma": 330,
+  "totalFrames": 990,
+  "duration": 33,
+  "dilemmas": [
+    {
+      "question": "WHERE WOULD YOU LIVE?",
+      "optionA": {
+        "text": "HIGH-TECH CYBERPUNK MARS COLONY",
+        "emoji": "🪐",
+        "pct": 39
+      },
+      "optionB": {
+        "text": "SECLUDED NATURE PARADISE ON EARTH",
+        "emoji": "🌲",
+        "pct": 61
+      }
+    },
+    {
+      "question": "FUTURE GADGET",
+      "optionA": {
+        "text": "AI HUMANOID BUTLER & BODYGUARD",
+        "emoji": "🤖",
+        "pct": 58
+      },
+      "optionB": {
+        "text": "FLYING SELF-DRIVING SUPERCAR",
+        "emoji": "🏎️",
+        "pct": 42
+      }
+    },
+    {
+      "question": "OMNISCIENCE",
+      "optionA": {
+        "text": "KNOW ALL SECRETS OF THE UNIVERSE",
+        "emoji": "🌌",
+        "pct": 74
+      },
+      "optionB": {
+        "text": "LIVE WITH COMPLETE PEACE OF MIND",
+        "emoji": "✨",
+        "pct": 26
+      }
+    }
+  ],
+  "events": [
+    {
+      "t": 2,
+      "type": "tick",
+      "count": 5,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 3,
+      "type": "tick",
+      "count": 4,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 4,
+      "type": "tick",
+      "count": 3,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 5,
+      "type": "tick",
+      "count": 2,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 6,
+      "type": "tick",
+      "count": 1,
+      "dilemmaIdx": 0
+    },
+    {
+      "t": 7.5,
+      "type": "reveal",
+      "dilemmaIdx": 0,
+      "winner": "B",
+      "pctA": 39,
+      "pctB": 61
+    },
+    {
+      "t": 13,
+      "type": "tick",
+      "count": 5,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 14,
+      "type": "tick",
+      "count": 4,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 15,
+      "type": "tick",
+      "count": 3,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 16,
+      "type": "tick",
+      "count": 2,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 17,
+      "type": "tick",
+      "count": 1,
+      "dilemmaIdx": 1
+    },
+    {
+      "t": 18.5,
+      "type": "reveal",
+      "dilemmaIdx": 1,
+      "winner": "A",
+      "pctA": 58,
+      "pctB": 42
+    },
+    {
+      "t": 24,
+      "type": "tick",
+      "count": 5,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 25,
+      "type": "tick",
+      "count": 4,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 26,
+      "type": "tick",
+      "count": 3,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 27,
+      "type": "tick",
+      "count": 2,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 28,
+      "type": "tick",
+      "count": 1,
+      "dilemmaIdx": 2
+    },
+    {
+      "t": 29.5,
+      "type": "reveal",
+      "dilemmaIdx": 2,
+      "winner": "A",
+      "pctA": 74,
+      "pctB": 26
+    }
+  ]
+}
