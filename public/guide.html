@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng Tra Cứu Song Ngữ Anh - Việt • 60 Video Facebook Reels US</title>
+  <style>
+    :root {
+      --bg: #07090e;
+      --card-bg: rgba(13, 20, 36, 0.85);
+      --border: rgba(0, 240, 255, 0.25);
+      --cyan: #00F0FF;
+      --green: #39FF14;
+      --gold: #FFD700;
+      --magenta: #FF007F;
+      --text: #F1F5F9;
+      --muted: #94A3B8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      padding: 30px 20px 80px;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 35px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, var(--cyan), var(--green), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .quick-bar {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .badge-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 240, 255, 0.1);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+    .badge-link:hover {
+      background: var(--cyan);
+      color: #000;
+      box-shadow: 0 0 15px var(--cyan);
+    }
+    .topic-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin-bottom: 30px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    }
+    .topic-header {
+      padding: 18px 24px;
+      background: rgba(0,0,0,0.4);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .topic-title-vn {
+      font-size: 22px;
+      font-weight: 800;
+      color: #FFF;
+    }
+    .topic-title-en {
+      font-size: 15px;
+      color: var(--cyan);
+      font-weight: 600;
+      margin-left: 10px;
+    }
+    .topic-meta {
+      font-size: 13px;
+      padding: 4px 12px;
+      border-radius: 12px;
+      background: rgba(57, 255, 20, 0.15);
+      color: var(--green);
+      font-weight: 700;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    th, td {
+      padding: 12px 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 14px;
+    }
+    th {
+      background: rgba(0,0,0,0.25);
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    tr:hover td {
+      background: rgba(0, 240, 255, 0.04);
+    }
+    .ep-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 12px;
+      background: rgba(255, 215, 0, 0.15);
+      color: var(--gold);
+    }
+    .comp-code {
+      font-family: monospace;
+      font-size: 13px;
+      color: var(--cyan);
+      background: rgba(0, 240, 255, 0.08);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .render-btn {
+      cursor: pointer;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #FFF;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-family: monospace;
+      transition: all 0.2s;
+    }
+    .render-btn:hover {
+      background: var(--green);
+      color: #000;
+      border-color: var(--green);
+    }
+    .toast {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: var(--green);
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      display: none;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>BẢNG TRA CỨU SONG NGỮ ANH - VIỆT • 60 VIDEO FACEBOOK REELS US</h1>
+      <p class="subtitle">Đối chiếu tên tiếng Việt và tiếng Anh cho từng chủ đề, composition ID, và lệnh xuất bản tự động</p>
+      <div class="quick-bar">
+        <a class="badge-link" href="http://localhost:3100" target="_blank">📺 Mở Remotion Studio (Port 3100)</a>
+        <a class="badge-link" href="#t1">📖 Kinh Thánh</a>
+        <a class="badge-link" href="#t2">🕹️ Hoài Niệm</a>
+        <a class="badge-link" href="#t3">⚖️ Luật Kỳ Quặc</a>
+        <a class="badge-link" href="#t4">🗺️ Địa Lý Mỹ</a>
+        <a class="badge-link" href="#t5">💬 Drama Tin Nhắn</a>
+        <a class="badge-link" href="#t6">🌌 Hấp Dẫn ASMR</a>
+        <a class="badge-link" href="#t7">📊 Đua Vốn Hóa</a>
+      </div>
+    </header>
+
+    <!-- TOPIC 1 -->
+    <div class="topic-card" id="t1">
+      <div class="topic-header">
+        <div>
+          <span class="topic-title-vn">📖 Chủ đề 1: Đố Vui Kinh Thánh & Điển Tích Cổ</span>
+          <span class="topic-title-en">Topic 1: Bible & Ancient Scripture Trivia</span>
+        </div>
+        <div class="topic-meta">Folder: 01-Bible-KinhThanh • 10 Tập (80s/tập)</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 80px;">Tập</th>
+            <th>Tên tiếng Việt (Mô tả nội dung)</th>
+            <th>Tên tiếng Anh (English Title)</th>
+            <th>Mã Composition trên Studio</th>
+            <th style="width: 220px;">Lệnh xuất video MP4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="ep-badge">Tập 1</span></td>
+            <td><strong>Sự Tạo Dựng & Khởi Thủy</strong> (5 câu, 10s suy nghĩ)</td>
+            <td>Creation & Origins of Earth</td>
+            <td><span class="comp-code">BibleQuiz-Ep1-Tap1</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=bible --ep=1')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 2</span></td>
+            <td><strong>Những Anh Hùng Đức Tin</strong> (Đa-vít, Môi-se, Sam-sôn)</td>
+            <td>Heroes of Divine Faith</td>
+            <td><span class="comp-code">BibleQuiz-Ep2-Tap2</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=bible --ep=2')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 3</span></td>
+            <td><strong>Những Phép Màu Kinh Điển</strong> (Rẽ Biển Đỏ, Hóa bánh)</td>
+            <td>Miracles and Wonder Feats</td>
+            <td><span class="comp-code">BibleQuiz-Ep3-Tap3</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=bible --ep=3')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 4</span></td>
+            <td><strong>Lời Tiên Tri & Dấu Lạ Khải Huyền</strong></td>
+            <td>Prophecies & Visions</td>
+            <td><span class="comp-code">BibleQuiz-Ep4-Tap4</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=bible --ep=4')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 5</span></td>
+            <td><strong>Sự Khôn Ngoan Của Vua Sa-lô-môn</strong></td>
+            <td>Wisdom of Solomon</td>
+            <td><span class="comp-code">BibleQuiz-Ep5-Tap5</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=bible --ep=5')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 6</span></td>
+            <td><strong>Vùng Đất Thánh Cổ Đại</strong> (Giê-ru-sa-lem, Ga-li-lê)</td>
+            <td>Ancient Holy Lands</td>
+            <td><span class="comp-code">BibleQuiz-Ep6-Tap6</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=bible --ep=6')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 7</span></td>
+            <td><strong>Cuộc Đời Chúa Jesus</strong> (Giáng sinh & Phục sinh)</td>
+            <td>The Life of Jesus</td>
+            <td><span class="comp-code">BibleQuiz-Ep7-Tap7</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=bible --ep=7')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 8</span></td>
+            <td><strong>12 Sứ Đồ & Những Hành Trình Đầu Tiên</strong></td>
+            <td>The Apostles & Journeys</td>
+            <td><span class="comp-code">BibleQuiz-Ep8-Tap8</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=bible --ep=8')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 9</span></td>
+            <td><strong>Các Trận Đánh & Thành Lũy Cổ</strong> (Thành Giê-ri-cô)</td>
+            <td>Ancient Battles & Fortress</td>
+            <td><span class="comp-code">BibleQuiz-Ep9-Tap9</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=bible --ep=9')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 10</span></td>
+            <td><strong>Thử Thách Kinh Thánh Tối Thượng</strong> (5 câu hóc búa)</td>
+            <td>Ultimate Scripture Mastery</td>
+            <td><span class="comp-code">BibleQuiz-Ep10-Tap10</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=bible --ep=10')">📋 Copy lệnh</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TOPIC 2 -->
+    <div class="topic-card" id="t2">
+      <div class="topic-header">
+        <div>
+          <span class="topic-title-vn">🕹️ Chủ đề 2: Đố Vui Hoài Niệm Tuổi Thơ 80s & 90s</span>
+          <span class="topic-title-en">Topic 2: 80s & 90s Nostalgia Quiz</span>
+        </div>
+        <div class="topic-meta">Folder: 02-Nostalgia-HoaiNiem-80s90s • 10 Tập (80s/tập)</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 80px;">Tập</th>
+            <th>Tên tiếng Việt</th>
+            <th>Tên tiếng Anh</th>
+            <th>Mã Composition trên Studio</th>
+            <th style="width: 220px;">Lệnh xuất video MP4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="ep-badge">Tập 1</span></td>
+            <td><strong>Công Nghệ Tuổi Thơ</strong> (Đĩa mềm, máy băng VHS, máy nhắn tin)</td>
+            <td>Retro Gadgets & Tech</td>
+            <td><span class="comp-code">NostalgiaQuiz-Ep1-Tap1</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=nostalgia --ep=1')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 2</span></td>
+            <td><strong>Đồ Chơi Kinh Điển</strong> (Game Boy, Tamagotchi, Yo-yo)</td>
+            <td>Iconic Childhood Toys</td>
+            <td><span class="comp-code">NostalgiaQuiz-Ep2-Tap2</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=nostalgia --ep=2')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 3</span></td>
+            <td><strong>Phim Hoạt Hình Sáng Thứ Bảy</strong></td>
+            <td>Saturday Morning Cartoons</td>
+            <td><span class="comp-code">NostalgiaQuiz-Ep3-Tap3</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=nostalgia --ep=3')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 4</span></td>
+            <td><strong>Đồ Ăn Vặt & Nước Ngọt Thần Thánh</strong></td>
+            <td>Legendary 90s Snacks</td>
+            <td><span class="comp-code">NostalgiaQuiz-Ep4-Tap4</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=nostalgia --ep=4')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 5</span></td>
+            <td><strong>Máy Chơi Game 8-Bit & 16-Bit</strong></td>
+            <td>Classic Video Game Consoles</td>
+            <td><span class="comp-code">NostalgiaQuiz-Ep5-Tap5</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=nostalgia --ep=5')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 6</span></td>
+            <td><strong>Phim Bom Tấn Chiếu Rạp 80s 90s</strong></td>
+            <td>Blockbuster Movies</td>
+            <td><span class="comp-code">NostalgiaQuiz-Ep6-Tap6</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=nostalgia --ep=6')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 7</span></td>
+            <td><strong>Nhạc Pop & Nhóm Nhạc Boyband</strong></td>
+            <td>Pop Anthems & Cassette Hits</td>
+            <td><span class="comp-code">NostalgiaQuiz-Ep7-Tap7</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=nostalgia --ep=7')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 8</span></td>
+            <td><strong>Thời Trang & Xu Hướng Kì Lạ</strong></td>
+            <td>Wild 90s Fashion Trends</td>
+            <td><span class="comp-code">NostalgiaQuiz-Ep8-Tap8</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=nostalgia --ep=8')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 9</span></td>
+            <td><strong>Tiệm Thuê Băng Đĩa Blockbuster</strong></td>
+            <td>Blockbuster Friday Nights</td>
+            <td><span class="comp-code">NostalgiaQuiz-Ep9-Tap9</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=nostalgia --ep=9')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 10</span></td>
+            <td><strong>Thử Thách Hoài Niệm Đỉnh Cao</strong></td>
+            <td>Ultimate Gen-X / Millennial IQ</td>
+            <td><span class="comp-code">NostalgiaQuiz-Ep10-Tap10</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=nostalgia --ep=10')">📋 Copy lệnh</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TOPIC 3 -->
+    <div class="topic-card" id="t3">
+      <div class="topic-header">
+        <div>
+          <span class="topic-title-vn">⚖️ Chủ đề 3: Luật Kỳ Quặc & Bí Mật Tiểu Bang Mỹ</span>
+          <span class="topic-title-en">Topic 3: Crazy State Laws & US Secrets</span>
+        </div>
+        <div class="topic-meta">Folder: 03-CrazyLaws-LuatKyQuac • 10 Tập (80s/tập)</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 80px;">Tập</th>
+            <th>Tên tiếng Việt</th>
+            <th>Tên tiếng Anh</th>
+            <th>Mã Composition trên Studio</th>
+            <th style="width: 220px;">Lệnh xuất video MP4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="ep-badge">Tập 1</span></td>
+            <td><strong>Luật Động Vật Kì Lạ Nhất Nước Mỹ</strong></td>
+            <td>Bizarre Animal Laws</td>
+            <td><span class="comp-code">CrazyLaws-Ep1-Tap1</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=laws --ep=1')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 2</span></td>
+            <td><strong>Luật Ăn Uống Quái Đản</strong> (Ăn kem ngày chủ nhật)</td>
+            <td>Insane Food & Drink Bans</td>
+            <td><span class="comp-code">CrazyLaws-Ep2-Tap2</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=laws --ep=2')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 3</span></td>
+            <td><strong>Luật Giao Thông Khó Tin</strong></td>
+            <td>Unbelievable Driving Laws</td>
+            <td><span class="comp-code">CrazyLaws-Ep3-Tap3</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=laws --ep=3')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 4</span></td>
+            <td><strong>Luật Trang Phục & Lễ Nghi Xưa Cũ</strong></td>
+            <td>Outdated Fashion & Dress Codes</td>
+            <td><span class="comp-code">CrazyLaws-Ep4-Tap4</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=laws --ep=4')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 5</span></td>
+            <td><strong>Những Điều Cấm Ngày Chủ Nhật</strong> (Blue Laws)</td>
+            <td>Strict Sunday Blue Laws</td>
+            <td><span class="comp-code">CrazyLaws-Ep5-Tap5</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=laws --ep=5')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 6</span></td>
+            <td><strong>Luật Hôn Nhân & Hẹn Hò Khôi Hài</strong></td>
+            <td>Weird Marriage & Dating Rules</td>
+            <td><span class="comp-code">CrazyLaws-Ep6-Tap6</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=laws --ep=6')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 7</span></td>
+            <td><strong>Bí Mật Vùng Cấm & Căn Cứ Quân Sự Mỹ</strong></td>
+            <td>Restricted Military Secrets</td>
+            <td><span class="comp-code">CrazyLaws-Ep7-Tap7</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=laws --ep=7')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 8</span></td>
+            <td><strong>Luật Nhà Cửa & Hàng Xóm Trời Ơi</strong></td>
+            <td>Crazy Neighbor & Yard Laws</td>
+            <td><span class="comp-code">CrazyLaws-Ep8-Tap8</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=laws --ep=8')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 9</span></td>
+            <td><strong>Luật Quái Dị Miền Nam Nước Mỹ</strong></td>
+            <td>Deep South Peculiar Rules</td>
+            <td><span class="comp-code">CrazyLaws-Ep9-Tap9</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=laws --ep=9')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 10</span></td>
+            <td><strong>Top Luật Kỳ Quặc Gây Tranh Cãi Nhất</strong></td>
+            <td>Most Contested US Ordinances</td>
+            <td><span class="comp-code">CrazyLaws-Ep10-Tap10</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=laws --ep=10')">📋 Copy lệnh</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TOPIC 4 -->
+    <div class="topic-card" id="t4">
+      <div class="topic-header">
+        <div>
+          <span class="topic-title-vn">🗺️ Chủ đề 4: Đố Vui Địa Lý Nước Mỹ & IQ</span>
+          <span class="topic-title-en">Topic 4: US Geography & American IQ</span>
+        </div>
+        <div class="topic-meta">Folder: 04-Geography-DiaLyMy • 10 Tập (80s/tập)</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 80px;">Tập</th>
+            <th>Tên tiếng Việt</th>
+            <th>Tên tiếng Anh</th>
+            <th>Mã Composition trên Studio</th>
+            <th style="width: 220px;">Lệnh xuất video MP4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="ep-badge">Tập 1</span></td>
+            <td><strong>Thủ Phủ Các Tiểu Bang Hay Bị Nhầm</strong></td>
+            <td>Tricky State Capitals</td>
+            <td><span class="comp-code">GeographyQuiz-Ep1-Tap1</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=geography --ep=1')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 2</span></td>
+            <td><strong>Dãy Núi & Thác Nước Kỳ Vĩ</strong> (Grand Canyon, Rockies)</td>
+            <td>Epic Canyons & Mountains</td>
+            <td><span class="comp-code">GeographyQuiz-Ep2-Tap2</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=geography --ep=2')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 3</span></td>
+            <td><strong>Các Dòng Sông Lớn & Vĩ Tuyến</strong> (Mississippi, Rio Grande)</td>
+            <td>Great Rivers & Borders</td>
+            <td><span class="comp-code">GeographyQuiz-Ep3-Tap3</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=geography --ep=3')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 4</span></td>
+            <td><strong>Bờ Biển & Những Vùng Đất Ngoại Ô</strong></td>
+            <td>Coastlines & Island Territories</td>
+            <td><span class="comp-code">GeographyQuiz-Ep4-Tap4</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=geography --ep=4')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 5</span></td>
+            <td><strong>Khí Hậu Khắc Nghiệt & Thung Lũng Chết</strong></td>
+            <td>Death Valley & Extreme Climates</td>
+            <td><span class="comp-code">GeographyQuiz-Ep5-Tap5</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=geography --ep=5')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 6</span></td>
+            <td><strong>Biệt Danh Các Tiểu Bang</strong> (Sunshine State, Lone Star)</td>
+            <td>State Nicknames & Mottos</td>
+            <td><span class="comp-code">GeographyQuiz-Ep6-Tap6</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=geography --ep=6')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 7</span></td>
+            <td><strong>Công Viên Quốc Gia Nổi Tiếng</strong> (Yellowstone, Yosemite)</td>
+            <td>Famous National Parks</td>
+            <td><span class="comp-code">GeographyQuiz-Ep7-Tap7</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=geography --ep=7')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 8</span></td>
+            <td><strong>Những Cây Cầu & Kỳ Quan Nhân Tạo</strong></td>
+            <td>Bridges & Man-Made Landmarks</td>
+            <td><span class="comp-code">GeographyQuiz-Ep8-Tap8</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=geography --ep=8')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 9</span></td>
+            <td><strong>Kích Thước & Dân Số Tiểu Bang</strong> (Alaska vs Texas)</td>
+            <td>Area & Population Extremes</td>
+            <td><span class="comp-code">GeographyQuiz-Ep9-Tap9</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=geography --ep=9')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 10</span></td>
+            <td><strong>Thử Thách Công Dân Mỹ Đỉnh Cao</strong></td>
+            <td>Ultimate US Citizenship Challenge</td>
+            <td><span class="comp-code">GeographyQuiz-Ep10-Tap10</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=geography --ep=10')">📋 Copy lệnh</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TOPIC 5 -->
+    <div class="topic-card" id="t5">
+      <div class="topic-header">
+        <div>
+          <span class="topic-title-vn">💬 Chủ đề 5: Kịch Bản Tin Nhắn Drama Tâm Sự AITAH</span>
+          <span class="topic-title-en">Topic 5: Fake iMessage Drama / AITAH Stories</span>
+        </div>
+        <div class="topic-meta">Folder: 05-ChatDrama-TamSuAITAH • 10 Tập (45s/tập)</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 80px;">Tập</th>
+            <th>Tên tiếng Việt (Cốt truyện kịch tính)</th>
+            <th>Tên tiếng Anh (Storyline)</th>
+            <th>Mã Composition trên Studio</th>
+            <th style="width: 220px;">Lệnh xuất video MP4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="ep-badge">Tập 1</span></td>
+            <td><strong>Tôi có sai khi hủy tiệc cưới bạn thân?</strong> (Đòi tiền quà $500)</td>
+            <td>The \$500 Bridal Shower Dispute</td>
+            <td><span class="comp-code">ChatDrama-Ep1-Tap1</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=chat --ep=1')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 2</span></td>
+            <td><strong>Hàng xóm đòi mật khẩu Wi-Fi & sạc trộm xe điện</strong></td>
+            <td>The Entitled EV Charger Neighbor</td>
+            <td><span class="comp-code">ChatDrama-Ep2-Tap2</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=chat --ep=2')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 3</span></td>
+            <td><strong>Sếp nhắn lúc 11 giờ đêm bắt sửa báo cáo</strong></td>
+            <td>11 PM Emergency Boss Message</td>
+            <td><span class="comp-code">ChatDrama-Ep3-Tap3</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=chat --ep=3')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 4</span></td>
+            <td><strong>Chị dâu đòi bán rẻ lại xe hơi gia đình</strong></td>
+            <td>Family Discount Car Drama</td>
+            <td><span class="comp-code">ChatDrama-Ep4-Tap4</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=chat --ep=4')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 5</span></td>
+            <td><strong>Bạn cùng phòng ăn vụng đồ ăn xịn trong tủ</strong></td>
+            <td>Roommate Stole Expensive Groceries</td>
+            <td><span class="comp-code">ChatDrama-Ep5-Tap5</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=chat --ep=5')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 6</span></td>
+            <td><strong>Nhóm bạn chia tiền ăn nhà hàng sang chảnh</strong></td>
+            <td>Splitting Bill for Expensive Wine</td>
+            <td><span class="comp-code">ChatDrama-Ep6-Tap6</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=chat --ep=6')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 7</span></td>
+            <td><strong>Người yêu cũ nhắn tin mượn tiền chữa bệnh cho chó</strong></td>
+            <td>Ex Texting for Emergency Dog Bill</td>
+            <td><span class="comp-code">ChatDrama-Ep7-Tap7</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=chat --ep=7')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 8</span></td>
+            <td><strong>Bà mẹ chồng can thiệp đặt tên cho cháu nội</strong></td>
+            <td>Mother-in-Law Baby Naming War</td>
+            <td><span class="comp-code">ChatDrama-Ep8-Tap8</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=chat --ep=8')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 9</span></td>
+            <td><strong>Bạn thân đòi ở nhờ 3 tháng không đóng tiền nhà</strong></td>
+            <td>Best Friend Wants Free 3-Month Stay</td>
+            <td><span class="comp-code">ChatDrama-Ep9-Tap9</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=chat --ep=9')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 10</span></td>
+            <td><strong>Bị phát hiện nói xấu đồng nghiệp trong group chat</strong></td>
+            <td>Accidental Boss Screenshot Leak</td>
+            <td><span class="comp-code">ChatDrama-Ep10-Tap10</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=chat --ep=10')">📋 Copy lệnh</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TOPIC 6 -->
+    <div class="topic-card" id="t6">
+      <div class="topic-header">
+        <div>
+          <span class="topic-title-vn">🌌 Chủ đề 6: Mô Phỏng Vật Lý Hấp Dẫn ASMR Singularity Siege</span>
+          <span class="topic-title-en">Topic 6: Kinetic ASMR Singularity Siege (Orbital Rings)</span>
+        </div>
+        <div class="topic-meta">Folder: 06-Singularity-VatLyASMR • 10 Tập (45s - 100s)</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 80px;">Tập</th>
+            <th>Tên tiếng Việt (Đặc điểm & Âm thanh)</th>
+            <th>Tên tiếng Anh (Seed Physics)</th>
+            <th>Mã Composition trên Studio</th>
+            <th style="width: 220px;">Lệnh xuất video MP4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="ep-badge">Tập 1</span></td>
+            <td><strong>Vành Đai Quỹ Đạo Hạt Nhân (Seed 10031)</strong> (2,019f ~ 67.3s)</td>
+            <td>Kinetic Ignition Orbit #1</td>
+            <td><span class="comp-code">SingularitySiege-Ep1-Tap1</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=singularity --ep=1')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 2</span></td>
+            <td><strong>Đột Phá Bức Tường Lưới Plasma (Seed 10042)</strong> (3,002f ~ 100.1s)</td>
+            <td>Plasma Lattice Breaker #2</td>
+            <td><span class="comp-code">SingularitySiege-Ep2-Tap2</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=singularity --ep=2')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 3</span></td>
+            <td><strong>Cộng Hưởng Sao Băng Siêu Tốc (Seed 10055)</strong> (1,376f ~ 45.9s)</td>
+            <td>Hyperdrive Tri-Comet Overdrive #3</td>
+            <td><span class="comp-code">SingularitySiege-Ep3-Tap3</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=singularity --ep=3')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 4</span></td>
+            <td><strong>Vòng Xoáy Hấp Dẫn Sụp Đổ (Seed 10068)</strong> (1,841f ~ 61.4s)</td>
+            <td>Gravitational Collapse #4</td>
+            <td><span class="comp-code">SingularitySiege-Ep4-Tap4</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=singularity --ep=4')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 5</span></td>
+            <td><strong>Bão Từ Trường Tinh Thể (Seed 10077)</strong> (2,891f ~ 96.4s)</td>
+            <td>Magnetic Crystal Storm #5</td>
+            <td><span class="comp-code">SingularitySiege-Ep5-Tap5</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=singularity --ep=5')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 6</span></td>
+            <td><strong>Cộng Hưởng Chuông Pha Lê ASMR (Seed 10083)</strong> (2,072f ~ 69.1s)</td>
+            <td>Harmonic Crystal Resonance #6</td>
+            <td><span class="comp-code">SingularitySiege-Ep6-Tap6</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=singularity --ep=6')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 7</span></td>
+            <td><strong>Vụ Nổ Siêu Tân Tinh SSS+ (Seed 10091)</strong> (2,097f ~ 69.9s)</td>
+            <td>Supernova Victory Burst #7</td>
+            <td><span class="comp-code">SingularitySiege-Ep7-Tap7</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=singularity --ep=7')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 8</span></td>
+            <td><strong>Cánh Quạt Đẩy Tối Thượng (Seed 10104)</strong> (2,348f ~ 78.3s)</td>
+            <td>Deflector Cross Deflection #8</td>
+            <td><span class="comp-code">SingularitySiege-Ep8-Tap8</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=singularity --ep=8')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 9</span></td>
+            <td><strong>Thanh Trừng 108 Lõi Tinh Thể (Seed 10118)</strong> (2,410f ~ 80.3s)</td>
+            <td>Purge All 108 Shield Cores #9</td>
+            <td><span class="comp-code">SingularitySiege-Ep9-Tap9</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=singularity --ep=9')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Tập 10</span></td>
+            <td><strong>Điểm Kì Dị Vĩnh Hằng (Seed 10129)</strong> (2,536f ~ 84.5s)</td>
+            <td>Infinite Event Horizon #10</td>
+            <td><span class="comp-code">SingularitySiege-Ep10-Tap10</span></td>
+            <td><button class="render-btn" onclick="copyCmd('node scripts/render-fleet.js --topic=singularity --ep=10')">📋 Copy lệnh</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TOPIC 7 -->
+    <div class="topic-card" id="t7">
+      <div class="topic-header">
+        <div>
+          <span class="topic-title-vn">📊 Chủ đề 7: Đua Top Vốn Hóa & Tỷ Phú Giàu Nhất Thế Giới</span>
+          <span class="topic-title-en">Topic 7: Data & Bar Chart Races</span>
+        </div>
+        <div class="topic-meta">Folder: 07-DataRaces-DuaTopSoLieu • 2 Video + 2 Thumbnail</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 80px;">Loại</th>
+            <th>Tên tiếng Việt</th>
+            <th>Tên tiếng Anh</th>
+            <th>Mã Composition trên Studio</th>
+            <th style="width: 220px;">Lệnh xuất video MP4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="ep-badge">Video</span></td>
+            <td><strong>Đua Top Vốn Hóa Công Nghệ (2000 - 2026)</strong> (Apple, MSFT, NVIDIA)</td>
+            <td>Tech Giants Market Cap Race</td>
+            <td><span class="comp-code">BarChartRaceTech-CongNghe</span></td>
+            <td><button class="render-btn" onclick="copyCmd('npm run build:barchart')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Thumbnail</span></td>
+            <td><strong>Ảnh Bìa Đua Top Vốn Hóa (1080x1920)</strong></td>
+            <td>Bar Chart Race Thumbnail</td>
+            <td><span class="comp-code">BarChartRaceThumbnail-Thumb</span></td>
+            <td><button class="render-btn" onclick="copyCmd('npx remotion still src/index.ts BarChartRaceThumbnail-Thumb out/barchart_thumb.png')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Video</span></td>
+            <td><strong>Đua Top 10 Tỷ Phú Giàu Nhất Thế Giới (2000 - 2026)</strong> (Musk, Bezos, Gates)</td>
+            <td>Top 10 World Billionaires Race</td>
+            <td><span class="comp-code">BillionairesRace-TyPhu</span></td>
+            <td><button class="render-btn" onclick="copyCmd('npm run build:billionaires')">📋 Copy lệnh</button></td>
+          </tr>
+          <tr>
+            <td><span class="ep-badge">Thumbnail</span></td>
+            <td><strong>Ảnh Bìa Đua Top Tỷ Phú (1080x1920)</strong></td>
+            <td>Billionaires Thumbnail</td>
+            <td><span class="comp-code">BillionairesThumbnail-Thumb</span></td>
+            <td><button class="render-btn" onclick="copyCmd('npx remotion still src/index.ts BillionairesThumbnail-Thumb out/billionaires_thumb.png')">📋 Copy lệnh</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="toast" id="toast">Đã copy lệnh vào bộ nhớ tạm!</div>
+
+  <script>
+    function copyCmd(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        const t = document.getElementById('toast');
+        t.style.display = 'block';
+        setTimeout(() => { t.style.display = 'none'; }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
+

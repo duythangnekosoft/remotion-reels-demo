@@ -1,0 +1,211 @@
+export interface ChatDramaStory {
+  episodeNumber: number;
+  title: string;
+  contactName: string;
+  contactEmoji: string;
+  timeHeader: string;
+  dilemmaQuestion: string;
+  optionA: string;
+  optionB: string;
+  messages: {
+    id: number;
+    sender: "incoming" | "outgoing";
+    text: string;
+    typingDuration: number; // frames to show typing indicator
+    pauseAfter: number;     // frames to pause before next action
+  }[];
+}
+
+export const CHAT_DRAMA_EPISODES: ChatDramaStory[] = [
+  {
+    episodeNumber: 1,
+    title: "Wedding Canceled Over House Keys",
+    contactName: "Mother-in-law",
+    contactEmoji: "🐍",
+    timeHeader: "Today 9:41 PM",
+    dilemmaQuestion: "Did the groom overreact?",
+    optionA: "He was 100% right! Huge red flag 🚩",
+    optionB: "Family comes first, he overreacted! 👎",
+    messages: [
+      { id: 1, sender: "incoming", text: "Hey! You need to drop off the spare keys to your new house tonight.", typingDuration: 30, pauseAfter: 35 },
+      { id: 2, sender: "outgoing", text: "Excuse me? Why would you need keys to our private home?", typingDuration: 25, pauseAfter: 35 },
+      { id: 3, sender: "incoming", text: "Because my son lives there, and as his mother, I have every right to inspect the property whenever I please.", typingDuration: 30, pauseAfter: 40 },
+      { id: 4, sender: "outgoing", text: "First of all, your son doesn't own this house. My parents bought it for me, and only my name is on the deed.", typingDuration: 30, pauseAfter: 40 },
+      { id: 5, sender: "incoming", text: "That doesn't matter! Once you marry him next month, it's half his, and you will learn to respect my authority in this family!", typingDuration: 30, pauseAfter: 45 },
+      { id: 6, sender: "outgoing", text: "Well, thanks to this text, the wedding is officially cancelled. Tell your son to pack his bags by tomorrow morning.", typingDuration: 30, pauseAfter: 45 },
+      { id: 7, sender: "incoming", text: "Wait, what?! You cannot be serious! Answer the phone right now!!", typingDuration: 25, pauseAfter: 40 },
+    ],
+  },
+  {
+    episodeNumber: 2,
+    title: "The Landlord Deposit Scam",
+    contactName: "Landlord Greg",
+    contactEmoji: "🏚️",
+    timeHeader: "Today 2:15 PM",
+    dilemmaQuestion: "Who is in the right?",
+    optionA: "Tenant wins! Landlords are out of control 👏",
+    optionB: "Landlord has a right to inspect the walls! 💼",
+    messages: [
+      { id: 1, sender: "incoming", text: "Hey David, just finished the move-out inspection. I will not be returning your $2,500 security deposit.", typingDuration: 30, pauseAfter: 35 },
+      { id: 2, sender: "outgoing", text: "What? I hired professional cleaners and left that place spotless! Why are you withholding my deposit?", typingDuration: 30, pauseAfter: 35 },
+      { id: 3, sender: "incoming", text: "There was dust on the top of the living room baseboards, and four tiny nail holes from hanging pictures.", typingDuration: 30, pauseAfter: 40 },
+      { id: 4, sender: "outgoing", text: "Greg, nail holes and light dust are defined as normal wear and tear under state civil code. You cannot deduct for that.", typingDuration: 30, pauseAfter: 40 },
+      { id: 5, sender: "incoming", text: "In my lease it says 'pristine condition'. I had to repaint the whole house. If you don't like it, take me to court.", typingDuration: 30, pauseAfter: 45 },
+      { id: 6, sender: "outgoing", text: "Actually, my lawyer just sent a certified demand letter. Under state statute, bad faith deduction entitles me to 3X treble damages: $7,500. See you in small claims.", typingDuration: 35, pauseAfter: 45 },
+      { id: 7, sender: "incoming", text: "Wait wait David let's not get lawyers involved, I can Zelle you $2,000 right now let's work this out!", typingDuration: 25, pauseAfter: 40 },
+    ],
+  },
+  {
+    episodeNumber: 3,
+    title: "The HOA Karen Nightmare",
+    contactName: "HOA Brenda",
+    contactEmoji: "🏡",
+    timeHeader: "Today 7:30 AM",
+    dilemmaQuestion: "Should HOAs be banned?",
+    optionA: "Yes! Karen got what she deserved 💀",
+    optionB: "Rules are rules, keep work vans off driveways! 📜",
+    messages: [
+      { id: 1, sender: "incoming", text: "Notice of Violation: Your electrical contractor van is parked in your driveway. That is a $500 fine per day.", typingDuration: 30, pauseAfter: 35 },
+      { id: 2, sender: "outgoing", text: "Brenda, I'm an independent electrician. That is my personal work vehicle and it fits completely inside my driveway.", typingDuration: 30, pauseAfter: 35 },
+      { id: 3, sender: "incoming", text: "Bylaw 14 clearly states no commercial signage visible from the street. It lowers our neighborhood property values.", typingDuration: 30, pauseAfter: 40 },
+      { id: 4, sender: "outgoing", text: "I park it inside my garage every evening. It was outside for 20 minutes while I loaded tools.", typingDuration: 30, pauseAfter: 40 },
+      { id: 5, sender: "incoming", text: "Doesn't matter. I took a photo. You owe $500 by Friday or we place a lien against your house.", typingDuration: 30, pauseAfter: 45 },
+      { id: 6, sender: "outgoing", text: "Interesting. While you were taking photos, I noticed your backyard 2-story shed was built without city permits and exceeds height limits by 6 feet. City inspector is already en route.", typingDuration: 35, pauseAfter: 45 },
+      { id: 7, sender: "incoming", text: "YOU CALLED THE CITY ON MY SHED?! That cost me $18,000! Delete your complaint right now or I swear to God!", typingDuration: 25, pauseAfter: 40 },
+    ],
+  },
+  {
+    episodeNumber: 4,
+    title: "11 PM Boss Demanding Unpaid Sunday",
+    contactName: "Boss Rick",
+    contactEmoji: "👔",
+    timeHeader: "Sunday 11:15 PM",
+    dilemmaQuestion: "Did the employee do the right thing?",
+    optionA: "100% justified! Toxic bosses must learn 👏",
+    optionB: "Quitting via text hurts future references 💼",
+    messages: [
+      { id: 1, sender: "incoming", text: "Need you to come into the warehouse at 6 AM tomorrow to unload 3 shipping containers.", typingDuration: 30, pauseAfter: 35 },
+      { id: 2, sender: "outgoing", text: "Rick, it's 11:15 PM on Sunday. Tomorrow is my scheduled day off and I'm out of town with my family.", typingDuration: 30, pauseAfter: 35 },
+      { id: 3, sender: "incoming", text: "My nephew called in sick, so you have to step up. Being on salary means 24/7 availability.", typingDuration: 30, pauseAfter: 40 },
+      { id: 4, sender: "outgoing", text: "My employment contract states 40 hours per week. I already worked 54 hours this week with zero overtime pay.", typingDuration: 30, pauseAfter: 40 },
+      { id: 5, sender: "incoming", text: "If you aren't at the loading dock at 6 AM, consider yourself terminated for gross insubordination.", typingDuration: 30, pauseAfter: 45 },
+      { id: 6, sender: "outgoing", text: "Don't bother. I resign effective immediately. Oh, and I'm the only person with the password to the supplier database for tomorrow's audit. Good luck.", typingDuration: 35, pauseAfter: 45 },
+      { id: 7, sender: "incoming", text: "Marcus pick up the phone right now! You cannot do this to the company, I will give you a raise!", typingDuration: 25, pauseAfter: 40 },
+    ],
+  },
+  {
+    episodeNumber: 5,
+    title: "The $2,000 Bridezilla Honeymoon Bill",
+    contactName: "Bridezilla Ashley",
+    contactEmoji: "👰",
+    timeHeader: "Today 6:45 PM",
+    dilemmaQuestion: "Is the bride completely out of her mind?",
+    optionA: "Bridezilla of the year! Insane demand 🚩",
+    optionB: "Bridesmaids should support the dream wedding 💍",
+    messages: [
+      { id: 1, sender: "incoming", text: "Hey girl! Just sent you a Venmo request for $2,000 for our Bora Bora overwater bungalow!", typingDuration: 30, pauseAfter: 35 },
+      { id: 2, sender: "outgoing", text: "Wait what? Why are you charging me for your honeymoon with your fiancé?", typingDuration: 30, pauseAfter: 35 },
+      { id: 3, sender: "incoming", text: "The bridal party is splitting the luxury bungalow costs. It's a tradition to gift the bride her dream honeymoon!", typingDuration: 30, pauseAfter: 40 },
+      { id: 4, sender: "outgoing", text: "Ashley, I already spent $600 on the bridesmaid dress, $800 on your Miami bachelorette trip, and $250 on hair. I cannot afford $2,000 more.", typingDuration: 30, pauseAfter: 40 },
+      { id: 5, sender: "incoming", text: "If you can't afford to celebrate me, then you clearly don't value our friendship. It's my special once-in-a-lifetime day!", typingDuration: 30, pauseAfter: 45 },
+      { id: 6, sender: "outgoing", text: "You're right. I'm stepping down as bridesmaid. Return my $600 for the dress or keep it, but please don't contact me again.", typingDuration: 35, pauseAfter: 45 },
+      { id: 7, sender: "incoming", text: "YOU CANNOT DROP OUT 2 WEEKS BEFORE THE WEDDING! All my photos will be ruined with uneven numbers! You are so selfish!!", typingDuration: 25, pauseAfter: 40 },
+    ],
+  },
+  {
+    episodeNumber: 6,
+    title: "The Entitled RV Neighbor",
+    contactName: "Neighbor Dave",
+    contactEmoji: "🚐",
+    timeHeader: "Today 8:05 AM",
+    dilemmaQuestion: "Did the homeowner do the right thing?",
+    optionA: "Towing the RV was the ultimate power move 😎",
+    optionB: "He should have knocked on the door first 🚪",
+    messages: [
+      { id: 1, sender: "outgoing", text: "Dave, your 35-foot RV is parked across my driveway. I cannot get my car out to go to work.", typingDuration: 30, pauseAfter: 35 },
+      { id: 2, sender: "incoming", text: "Yeah I know, my paving guys are sealing my driveway today. Just park on the street for 3 days.", typingDuration: 30, pauseAfter: 35 },
+      { id: 3, sender: "outgoing", text: "I can't get to the street! Your RV is physically blocking my garage door. You need to move it right now.", typingDuration: 30, pauseAfter: 40 },
+      { id: 4, sender: "incoming", text: "I'm already at the golf course 40 miles away. Relax, take an Uber. It's not a big deal between neighbors.", typingDuration: 30, pauseAfter: 40 },
+      { id: 5, sender: "outgoing", text: "I gave you 15 minutes. Heavy duty tow truck is hooking up your RV right now. Impound lot fee is $650 per day.", typingDuration: 30, pauseAfter: 45 },
+      { id: 6, sender: "incoming", text: "WHAT?! DO NOT TOUCH MY RV! It's a $150,000 vehicle! Tell the driver to stop immediately!", typingDuration: 30, pauseAfter: 45 },
+      { id: 7, sender: "outgoing", text: "Too late, it's turning down Maple Street. Hope your golf game went well today Dave! 👋", typingDuration: 25, pauseAfter: 40 },
+    ],
+  },
+  {
+    episodeNumber: 7,
+    title: "Caught on the Shared iPad",
+    contactName: "Fiancée Jessica",
+    contactEmoji: "💍",
+    timeHeader: "Friday 10:45 PM",
+    dilemmaQuestion: "Did the shared iPad save his life?",
+    optionA: "Dodged a massive bullet before marriage! 🛡️",
+    optionB: "Invading synced iPad messages is wrong 📱",
+    messages: [
+      { id: 1, sender: "incoming", text: "Hey babe, stuck doing late paperwork at the clinic with the team. Don't wait up for me, love you ❤️", typingDuration: 30, pauseAfter: 35 },
+      { id: 2, sender: "outgoing", text: "That's crazy, because your iMessage is synced to our living room iPad right in front of me.", typingDuration: 30, pauseAfter: 35 },
+      { id: 3, sender: "incoming", text: "What do you mean? What are you looking at?", typingDuration: 25, pauseAfter: 40 },
+      { id: 4, sender: "outgoing", text: "I just watched you text Dr. Mark: 'Room 412 is booked, see you upstairs in 5 minutes handsome.'", typingDuration: 30, pauseAfter: 40 },
+      { id: 5, sender: "incoming", text: "NO NO NO that was an inside joke between coworkers! Please don't misinterpret this! Let me explain!", typingDuration: 30, pauseAfter: 45 },
+      { id: 6, sender: "outgoing", text: "Save your explanations for Dr. Mark. The locksmith is replacing our front door deadbolts right now. Your clothes are in trash bags on the lawn.", typingDuration: 35, pauseAfter: 45 },
+      { id: 7, sender: "incoming", text: "TOM PLEASE DO NOT DO THIS! We have a wedding in two months! Answer my FaceTime right now!!", typingDuration: 25, pauseAfter: 40 },
+    ],
+  },
+  {
+    episodeNumber: 8,
+    title: "The $150/hr Surprise Babysitter",
+    contactName: "Mrs. Henderson",
+    contactEmoji: "🍼",
+    timeHeader: "Today 11:30 PM",
+    dilemmaQuestion: "Who is in the wrong?",
+    optionA: "Mother is delusional! $20/hr is generous 💸",
+    optionB: "Babysitters deserve professional wages 👩‍🏫",
+    messages: [
+      { id: 1, sender: "outgoing", text: "Hi Mrs. Henderson, thanks so much for letting your daughter Emily babysit our sleeping toddler for 2 hours tonight! I sent her $45 ($22.50/hr).", typingDuration: 30, pauseAfter: 35 },
+      { id: 2, sender: "incoming", text: "Excuse me? Emily's standard rate is $150 per hour. You owe an additional $255 immediately.", typingDuration: 30, pauseAfter: 35 },
+      { id: 3, sender: "outgoing", text: "Are you serious? Certified registered nurses don't even make $150 an hour! She sat on our sofa watching Netflix for 120 minutes while our baby slept.", typingDuration: 30, pauseAfter: 40 },
+      { id: 4, sender: "incoming", text: "Emily has a 4.2 GPA and is CPR certified. Her time is extraordinarily valuable. Pay up or I will post about this on the neighborhood Facebook group.", typingDuration: 30, pauseAfter: 40 },
+      { id: 5, sender: "outgoing", text: "Please go ahead and post it. The entire town will laugh you off the internet for demanding $150 an hour for a 16-year-old babysitter.", typingDuration: 35, pauseAfter: 45 },
+      { id: 6, sender: "incoming", text: "You are taking advantage of a minor! I am calling my husband's attorney first thing tomorrow morning!", typingDuration: 30, pauseAfter: 45 },
+      { id: 7, sender: "outgoing", text: "Good luck explaining that to the judge. Have a great night Mrs. Henderson! 😴", typingDuration: 25, pauseAfter: 40 },
+    ],
+  },
+  {
+    episodeNumber: 9,
+    title: "The Crashed Corvette 'Favor'",
+    contactName: "Ex-Friend Tyler",
+    contactEmoji: "🏎️",
+    timeHeader: "Saturday 2:30 AM",
+    dilemmaQuestion: "Would you ever lend a luxury car to a friend?",
+    optionA: "Never lend cars to friends! Sue him for damages 💥",
+    optionB: "Accidents happen, insurance will take care of it 🤝",
+    messages: [
+      { id: 1, sender: "incoming", text: "Hey bro... don't freak out, but there was a minor situation with your Corvette tonight.", typingDuration: 30, pauseAfter: 35 },
+      { id: 2, sender: "outgoing", text: "Tyler, you swore on your life you were only driving it 5 miles to take your anniversary date to dinner. What happened?", typingDuration: 30, pauseAfter: 35 },
+      { id: 3, sender: "incoming", text: "Road was wet and the back tires slipped a little bit into a telephone pole. Just a tiny bumper scratch.", typingDuration: 30, pauseAfter: 40 },
+      { id: 4, sender: "outgoing", text: "You just texted me from a police impound lot. The officer sent me a photo. The entire front axle is snapped in half and the airbags deployed!", typingDuration: 35, pauseAfter: 40 },
+      { id: 5, sender: "incoming", text: "Well bro your insurance covers it right? That's what insurance is for, why are you screaming at me?", typingDuration: 30, pauseAfter: 45 },
+      { id: 6, sender: "outgoing", text: "My insurance doesn't cover unauthorized reckless drivers doing 85 in a 35 zone with a suspended license, which the police just informed me you have.", typingDuration: 35, pauseAfter: 45 },
+      { id: 7, sender: "incoming", text: "Bro please don't press charges! I can't go to jail, I have a promotion next month! Please tell them you authorized it!", typingDuration: 25, pauseAfter: 40 },
+    ],
+  },
+  {
+    episodeNumber: 10,
+    title: "Rehearsal Dinner Pregnancy Announcement",
+    contactName: "Sister-in-Law Chloe",
+    contactEmoji: "🤰",
+    timeHeader: "Today 10:15 PM",
+    dilemmaQuestion: "Was the bride right to kick her out?",
+    optionA: "100% right! Never steal the bride's spotlight 👰",
+    optionB: "Too dramatic, pregnancy is a family blessing 👶",
+    messages: [
+      { id: 1, sender: "incoming", text: "I can't believe you made a scene and kicked me out of the rehearsal dinner in front of the entire family!", typingDuration: 30, pauseAfter: 35 },
+      { id: 2, sender: "outgoing", text: "Chloe, you tapped your champagne glass during my father's wedding toast and announced your 6-week pregnancy to steal the spotlight!", typingDuration: 30, pauseAfter: 35 },
+      { id: 3, sender: "incoming", text: "Everyone was gathered together! It was the perfect moment to share happy family news. Why can't you be happy for me?", typingDuration: 30, pauseAfter: 40 },
+      { id: 4, sender: "outgoing", text: "You have 364 other days in the year. Tomorrow is my wedding day, which my parents paid $40,000 for.", typingDuration: 30, pauseAfter: 40 },
+      { id: 5, sender: "incoming", text: "Mom agrees with me. She said you are acting like an insecure child and you need to apologize before the ceremony tomorrow.", typingDuration: 30, pauseAfter: 45 },
+      { id: 6, sender: "outgoing", text: "Here is my apology: your name and your husband's name have just been removed from the reception guest list and security will escort you off the venue if you show up.", typingDuration: 35, pauseAfter: 45 },
+      { id: 7, sender: "incoming", text: "YOU BANNED ME FROM MY BROTHER'S WEDDING?! Mom is going to disown you for this! Answer your phone!", typingDuration: 25, pauseAfter: 40 },
+    ],
+  },
+];
+
