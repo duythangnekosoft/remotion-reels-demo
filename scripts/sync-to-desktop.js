@@ -49,6 +49,7 @@ function copyRecursive(src, dst) {
 const DIRS_TO_SYNC = [
   path.join("src"),
   path.join("scripts"),
+  path.join("docs"),
   path.join("public", "sounds"),
   path.join("public", "audio"),
   path.join("out"),
