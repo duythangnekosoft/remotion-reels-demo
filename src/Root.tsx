@@ -14,6 +14,7 @@ import { LastMarbleThumbnail } from "./LastMarble/LastMarbleThumbnail";
 import { NeonBloomComposition } from "./KineticStudies/NeonBloomComposition";
 import { BuildBattleComposition } from "./KineticStudies/BuildBattleComposition";
 import { BrickBreakerComposition } from "./KineticStudies/BrickBreakerComposition";
+import { KineticFiveComposition } from "./KineticStudies/KineticFiveComposition";
 import { MarbleRaceComposition } from "./MarbleRace/MarbleRaceComposition";
 import { TerritoryComposition } from "./TerritoryConquest/TerritoryComposition";
 import { PlinkoComposition } from "./Plinko/PlinkoComposition";
@@ -34,7 +35,7 @@ export const RemotionRoot: React.FC = () => {
   return (
     <>
       {/* ========================================================
-          01. MARBLE RACE GRAND PRIX (40.3s)
+          01. MARBLE RACE GRAND PRIX (5 Episodes)
          ======================================================== */}
         <Folder name="01-Marble-Race">
           <Composition
@@ -46,10 +47,46 @@ export const RemotionRoot: React.FC = () => {
             height={1920}
             defaultProps={{ episode: 1 }}
           />
+          <Composition
+            id="MarbleRace-Ep2-VolcanoGauntlet"
+            component={MarbleRaceComposition}
+            durationInFrames={getMarbleRaceDuration(2)}
+            fps={30}
+            width={1080}
+            height={1920}
+            defaultProps={{ episode: 2 }}
+          />
+          <Composition
+            id="MarbleRace-Ep3-GlacierDrift"
+            component={MarbleRaceComposition}
+            durationInFrames={getMarbleRaceDuration(3)}
+            fps={30}
+            width={1080}
+            height={1920}
+            defaultProps={{ episode: 3 }}
+          />
+          <Composition
+            id="MarbleRace-Ep4-DesertRally"
+            component={MarbleRaceComposition}
+            durationInFrames={getMarbleRaceDuration(4)}
+            fps={30}
+            width={1080}
+            height={1920}
+            defaultProps={{ episode: 4 }}
+          />
+          <Composition
+            id="MarbleRace-Ep5-CosmicLoop"
+            component={MarbleRaceComposition}
+            durationInFrames={getMarbleRaceDuration(5)}
+            fps={30}
+            width={1080}
+            height={1920}
+            defaultProps={{ episode: 5 }}
+          />
         </Folder>
 
         {/* ========================================================
-          02. TERRITORY CONQUEST (36.0s - 100% DOMINATION)
+          02. TERRITORY CONQUEST (100% DOMINATION - 5 Episodes)
          ======================================================== */}
           <Folder name="02-Territory-Conquest">
             <Composition
@@ -61,10 +98,46 @@ export const RemotionRoot: React.FC = () => {
               height={1920}
               defaultProps={{ episode: 1 }}
             />
+            <Composition
+              id="Territory-Ep2-FourCorners"
+              component={TerritoryComposition}
+              durationInFrames={getTerritoryDuration(2)}
+              fps={30}
+              width={1080}
+              height={1920}
+              defaultProps={{ episode: 2 }}
+            />
+            <Composition
+              id="Territory-Ep3-FortressKing"
+              component={TerritoryComposition}
+              durationInFrames={getTerritoryDuration(3)}
+              fps={30}
+              width={1080}
+              height={1920}
+              defaultProps={{ episode: 3 }}
+            />
+            <Composition
+              id="Territory-Ep4-CrossfireMatrix"
+              component={TerritoryComposition}
+              durationInFrames={getTerritoryDuration(4)}
+              fps={30}
+              width={1080}
+              height={1920}
+              defaultProps={{ episode: 4 }}
+            />
+            <Composition
+              id="Territory-Ep5-ElementalWar"
+              component={TerritoryComposition}
+              durationInFrames={getTerritoryDuration(5)}
+              fps={30}
+              width={1080}
+              height={1920}
+              defaultProps={{ episode: 5 }}
+            />
           </Folder>
 
           {/* ========================================================
-          03. LUCKY PLINKO $1M ASMR DROP (33.3s)
+          03. LUCKY PLINKO $1M ASMR DROP (5 Episodes)
          ======================================================== */}
             <Folder name="03-Plinko-ASMR">
               <Composition
@@ -76,10 +149,46 @@ export const RemotionRoot: React.FC = () => {
                 height={1920}
                 defaultProps={{ episode: 1 }}
               />
+              <Composition
+                id="Plinko-Ep2-MidnightNeon"
+                component={PlinkoComposition}
+                durationInFrames={getPlinkoDuration(2)}
+                fps={30}
+                width={1080}
+                height={1920}
+                defaultProps={{ episode: 2 }}
+              />
+              <Composition
+                id="Plinko-Ep3-HighRoller"
+                component={PlinkoComposition}
+                durationInFrames={getPlinkoDuration(3)}
+                fps={30}
+                width={1080}
+                height={1920}
+                defaultProps={{ episode: 3 }}
+              />
+              <Composition
+                id="Plinko-Ep4-MegaMultiplier"
+                component={PlinkoComposition}
+                durationInFrames={getPlinkoDuration(4)}
+                fps={30}
+                width={1080}
+                height={1920}
+                defaultProps={{ episode: 4 }}
+              />
+              <Composition
+                id="Plinko-Ep5-ImpossibleBounce"
+                component={PlinkoComposition}
+                durationInFrames={getPlinkoDuration(5)}
+                fps={30}
+                width={1080}
+                height={1920}
+                defaultProps={{ episode: 5 }}
+              />
             </Folder>
 
             {/* ========================================================
-          04. WOULD YOU RATHER SHOWDOWN (33.0s)
+          04. WOULD YOU RATHER SHOWDOWN (5 Episodes)
          ======================================================== */}
               <Folder name="04-Would-You-Rather">
                 <Composition
@@ -90,6 +199,42 @@ export const RemotionRoot: React.FC = () => {
                   width={1080}
                   height={1920}
                   defaultProps={{ episode: 1 }}
+                />
+                <Composition
+                  id="WouldYouRather-Ep2-ExtremeWealth"
+                  component={WouldYouRatherComposition}
+                  durationInFrames={getWouldYouRatherDuration(2)}
+                  fps={30}
+                  width={1080}
+                  height={1920}
+                  defaultProps={{ episode: 2 }}
+                />
+                <Composition
+                  id="WouldYouRather-Ep3-Psychology"
+                  component={WouldYouRatherComposition}
+                  durationInFrames={getWouldYouRatherDuration(3)}
+                  fps={30}
+                  width={1080}
+                  height={1920}
+                  defaultProps={{ episode: 3 }}
+                />
+                <Composition
+                  id="WouldYouRather-Ep4-Survival"
+                  component={WouldYouRatherComposition}
+                  durationInFrames={getWouldYouRatherDuration(4)}
+                  fps={30}
+                  width={1080}
+                  height={1920}
+                  defaultProps={{ episode: 4 }}
+                />
+                <Composition
+                  id="WouldYouRather-Ep5-TechFuture"
+                  component={WouldYouRatherComposition}
+                  durationInFrames={getWouldYouRatherDuration(5)}
+                  fps={30}
+                  width={1080}
+                  height={1920}
+                  defaultProps={{ episode: 5 }}
                 />
               </Folder>
 
@@ -116,7 +261,7 @@ export const RemotionRoot: React.FC = () => {
                 </Folder>
 
                 {/* ========================================================
-          06. KINETIC DUEL & ARENA GAMES (35s - 56s)
+          06. KINETIC DUEL & ARENA GAMES (5 Distinct Modes)
          ======================================================== */}
                   <Folder name="06-Kinetic-Games">
                     <Composition
@@ -142,6 +287,24 @@ export const RemotionRoot: React.FC = () => {
                       fps={30}
                       width={720}
                       height={1280}
+                    />
+                    <Composition
+                      id="Kinetic-RingRivals-37s"
+                      component={KineticFiveComposition}
+                      durationInFrames={1117}
+                      fps={30}
+                      width={720}
+                      height={1280}
+                      defaultProps={{ id: "RingRivals" }}
+                    />
+                    <Composition
+                      id="Kinetic-PrismCollapse-35s"
+                      component={KineticFiveComposition}
+                      durationInFrames={1055}
+                      fps={30}
+                      width={720}
+                      height={1280}
+                      defaultProps={{ id: "PrismCollapse" }}
                     />
                   </Folder>
 
