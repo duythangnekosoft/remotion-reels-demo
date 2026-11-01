@@ -23,6 +23,58 @@ const EPISODE_MAP: Record<number, any> = {
   5: ep5Data,
 };
 
+interface WYRTheme {
+  title: string;
+  category: string;
+  bgColor: string;
+  glowA: string;
+  glowB: string;
+  accent: string;
+}
+
+const WYR_THEMES: Record<number, WYRTheme> = {
+  1: {
+    title: "SUPERPOWERS DILEMMA",
+    category: "HEROES VS REALITY",
+    bgColor: "#050811",
+    glowA: "rgba(14, 165, 233, 0.28)",
+    glowB: "rgba(236, 72, 153, 0.28)",
+    accent: "#38bdf8",
+  },
+  2: {
+    title: "WEALTH & LIFESTYLE",
+    category: "BILLIONS VS CURSES",
+    bgColor: "#0c0a03",
+    glowA: "rgba(234, 179, 8, 0.28)",
+    glowB: "rgba(16, 185, 129, 0.28)",
+    accent: "#facc15",
+  },
+  3: {
+    title: "EXTREME SURVIVAL",
+    category: "LIFE OR DEATH INSTINCTS",
+    bgColor: "#140505",
+    glowA: "rgba(239, 68, 68, 0.28)",
+    glowB: "rgba(249, 115, 22, 0.28)",
+    accent: "#f87171",
+  },
+  4: {
+    title: "FUTURE & TECHNOLOGY",
+    category: "CYBER AI VS HUMANITY",
+    bgColor: "#020f14",
+    glowA: "rgba(6, 182, 212, 0.28)",
+    glowB: "rgba(139, 92, 246, 0.28)",
+    accent: "#22d3ee",
+  },
+  5: {
+    title: "IMPOSSIBLE PARADOXES",
+    category: "MIND BENDING DILEMMAS",
+    bgColor: "#0c0517",
+    glowA: "rgba(168, 85, 247, 0.28)",
+    glowB: "rgba(244, 63, 94, 0.28)",
+    accent: "#c084fc",
+  },
+};
+
 export interface WouldYouRatherProps {
   episode?: number;
 }
@@ -31,6 +83,7 @@ export const WouldYouRatherComposition: React.FC<WouldYouRatherProps> = ({ episo
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
+  const theme = WYR_THEMES[episode] || WYR_THEMES[1];
   const data = EPISODE_MAP[episode] || ep1Data;
   const framesPerDilemma = data.framesPerDilemma || 330; // 11.0s @ 30fps
 
@@ -78,7 +131,7 @@ export const WouldYouRatherComposition: React.FC<WouldYouRatherProps> = ({ episo
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: "#050811",
+        backgroundColor: theme.bgColor,
         color: "#ffffff",
         fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
         overflow: "hidden",
@@ -95,7 +148,7 @@ export const WouldYouRatherComposition: React.FC<WouldYouRatherProps> = ({ episo
           width: 600,
           height: 600,
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(14, 165, 233, 0.25) 0%, transparent 70%)",
+          background: `radial-gradient(circle, ${theme.glowA} 0%, transparent 70%)`,
           filter: "blur(70px)",
         }}
       />
@@ -107,7 +160,7 @@ export const WouldYouRatherComposition: React.FC<WouldYouRatherProps> = ({ episo
           width: 600,
           height: 600,
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(236, 72, 153, 0.25) 0%, transparent 70%)",
+          background: `radial-gradient(circle, ${theme.glowB} 0%, transparent 70%)`,
           filter: "blur(70px)",
         }}
       />
@@ -123,11 +176,11 @@ export const WouldYouRatherComposition: React.FC<WouldYouRatherProps> = ({ episo
           backdropFilter: "blur(14px)",
           borderRadius: 24,
           padding: "18px 28px",
-          border: "1px solid rgba(255, 255, 255, 0.12)",
+          border: `1px solid ${theme.accent}44`,
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          boxShadow: "0 16px 36px rgba(0,0,0,0.5)",
+          boxShadow: `0 16px 36px rgba(0,0,0,0.5), 0 0 20px ${theme.accent}22`,
           zIndex: 40,
         }}
       >
@@ -137,11 +190,11 @@ export const WouldYouRatherComposition: React.FC<WouldYouRatherProps> = ({ episo
               fontSize: 13,
               fontWeight: 800,
               letterSpacing: 3,
-              color: "#38bdf8",
+              color: theme.accent,
               textTransform: "uppercase",
             }}
           >
-            Showdown Ep #{episode} • Question {dIndex + 1} of 3
+            {theme.category} • EP #{episode} • Q{dIndex + 1}/3
           </div>
           <div style={{ fontSize: 28, fontWeight: 900, letterSpacing: -0.5 }}>
             {question}

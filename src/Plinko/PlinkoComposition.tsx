@@ -23,6 +23,64 @@ const EPISODE_MAP: Record<number, any> = {
   5: ep5Data,
 };
 
+interface PlinkoTheme {
+  title: string;
+  subtitle: string;
+  bgColor: string;
+  pegColor: string;
+  ballColor: string;
+  ballGlow: string;
+  accent: string;
+}
+
+const PLINKO_THEMES: Record<number, PlinkoTheme> = {
+  1: {
+    title: "LUCKY PLINKO $1M DROP",
+    subtitle: "THE $1,000,000 GOLDEN BALL RUN",
+    bgColor: "#080c18",
+    pegColor: "#475569",
+    ballColor: "#ffd700",
+    ballGlow: "rgba(255, 215, 0, 0.9)",
+    accent: "#ffd166",
+  },
+  2: {
+    title: "MIDNIGHT NEON DIAMOND",
+    subtitle: "CYBERPUNK HIGH STAKES RUN",
+    bgColor: "#0a0418",
+    pegColor: "#9333ea",
+    ballColor: "#00f5d4",
+    ballGlow: "rgba(0, 245, 212, 0.9)",
+    accent: "#a855f7",
+  },
+  3: {
+    title: "HIGH ROLLER PYRAMID",
+    subtitle: "VEGAS EXTREME SUSPENSE DROP",
+    bgColor: "#16050b",
+    pegColor: "#e11d48",
+    ballColor: "#ff0055",
+    ballGlow: "rgba(255, 0, 85, 0.9)",
+    accent: "#fb7185",
+  },
+  4: {
+    title: "MEGA MULTIPLIER PINBALL",
+    subtitle: "HIGH VELOCITY BOUNCE CASCADE",
+    bgColor: "#04151a",
+    pegColor: "#0284c7",
+    ballColor: "#38bdf8",
+    ballGlow: "rgba(56, 189, 248, 0.9)",
+    accent: "#38bdf8",
+  },
+  5: {
+    title: "THE IMPOSSIBLE CORNER",
+    subtitle: "NEAR ZERO SURVIVAL DEFLECTION",
+    bgColor: "#04140c",
+    pegColor: "#059669",
+    ballColor: "#10b981",
+    ballGlow: "rgba(16, 185, 129, 0.9)",
+    accent: "#34d399",
+  },
+};
+
 export interface PlinkoProps {
   episode?: number;
 }
@@ -31,6 +89,7 @@ export const PlinkoComposition: React.FC<PlinkoProps> = ({ episode = 1 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
+  const theme = PLINKO_THEMES[episode] || PLINKO_THEMES[1];
   const data = EPISODE_MAP[episode] || ep1Data;
   const currentIdx = Math.min(frame, data.frames.length - 1);
   const frameData = data.frames[currentIdx];
@@ -50,7 +109,7 @@ export const PlinkoComposition: React.FC<PlinkoProps> = ({ episode = 1 }) => {
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: "#070b14",
+        backgroundColor: theme.bgColor,
         color: "#ffffff",
         fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
         overflow: "hidden",
@@ -63,9 +122,9 @@ export const PlinkoComposition: React.FC<PlinkoProps> = ({ episode = 1 }) => {
         style={{
           position: "absolute",
           inset: 0,
-          opacity: 0.15,
+          opacity: 0.18,
           backgroundImage:
-            "radial-gradient(circle, #38bdf8 1px, transparent 1px)",
+            `radial-gradient(circle, ${theme.accent} 1px, transparent 1px)`,
           backgroundSize: "36px 36px",
         }}
       />
@@ -81,8 +140,8 @@ export const PlinkoComposition: React.FC<PlinkoProps> = ({ episode = 1 }) => {
           backdropFilter: "blur(14px)",
           borderRadius: 24,
           padding: "18px 26px",
-          border: "1px solid rgba(255, 255, 255, 0.12)",
-          boxShadow: "0 16px 36px rgba(0,0,0,0.5)",
+          border: `1px solid ${theme.accent}44`,
+          boxShadow: `0 16px 36px rgba(0,0,0,0.5), 0 0 20px ${theme.accent}22`,
           zIndex: 40,
         }}
       >
@@ -100,25 +159,25 @@ export const PlinkoComposition: React.FC<PlinkoProps> = ({ episode = 1 }) => {
                 fontSize: 13,
                 fontWeight: 800,
                 letterSpacing: 2.5,
-                color: "#ffd166",
+                color: theme.accent,
                 textTransform: "uppercase",
               }}
             >
-              ASMR Drop • Challenge Ep #{episode}
+              {theme.subtitle} • EP #{episode}
             </div>
             <div style={{ fontSize: 28, fontWeight: 900, letterSpacing: -0.5 }}>
-              LUCKY PLINKO $1M DROP
+              {theme.title}
             </div>
           </div>
           <div
             style={{
               padding: "8px 18px",
-              background: "rgba(255, 209, 102, 0.15)",
+              background: "rgba(255, 255, 255, 0.08)",
               borderRadius: 14,
-              border: "1px solid #ffd166",
+              border: `1px solid ${theme.accent}`,
               fontSize: 16,
               fontWeight: 900,
-              color: "#ffd166",
+              color: theme.accent,
             }}
           >
             TARGET: $1,000,000
@@ -311,9 +370,9 @@ export const PlinkoComposition: React.FC<PlinkoProps> = ({ episode = 1 }) => {
             height: 32,
             transform: "translate(-50%, -50%)",
             borderRadius: "50%",
-            background: `radial-gradient(circle at 35% 35%, #ffffff, ${b.color} 65%, #000000 100%)`,
-            boxShadow: `0 0 20px ${b.color}, 0 4px 10px rgba(0,0,0,0.6)`,
-            border: "2px solid #ffffff",
+            background: `radial-gradient(circle at 35% 35%, #ffffff, ${theme.ballColor} 65%, #000000 100%)`,
+            boxShadow: `0 0 24px ${theme.ballGlow}, 0 4px 10px rgba(0,0,0,0.6)`,
+            border: `2px solid ${theme.ballColor}`,
             zIndex: 30,
           }}
         />

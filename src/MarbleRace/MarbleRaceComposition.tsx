@@ -23,6 +23,76 @@ const EPISODE_MAP: Record<number, any> = {
   5: ep5Data,
 };
 
+interface MarbleTheme {
+  name: string;
+  subtitle: string;
+  bgColor: string;
+  gridColor: string;
+  accent: string;
+  wallStart: string;
+  wallEnd: string;
+  vortexColor: string;
+  vortexGlow: string;
+}
+
+const MARBLE_THEMES: Record<number, MarbleTheme> = {
+  1: {
+    name: "NEON CYBER SPEEDWAY",
+    subtitle: "HIGH-SPEED LASER CIRCUIT",
+    bgColor: "#070b14",
+    gridColor: "#203a43",
+    accent: "#00f5d4",
+    wallStart: "#00d2ff",
+    wallEnd: "#9b5de5",
+    vortexColor: "#9b5de5",
+    vortexGlow: "rgba(155, 93, 229, 0.35)",
+  },
+  2: {
+    name: "VOLCANO INFERNO GAUNTLET",
+    subtitle: "MOLTEN LAVA & CRUSHER TRAPS",
+    bgColor: "#160505",
+    gridColor: "#451208",
+    accent: "#ff4500",
+    wallStart: "#ff3300",
+    wallEnd: "#ffaa00",
+    vortexColor: "#ff4500",
+    vortexGlow: "rgba(255, 69, 0, 0.45)",
+  },
+  3: {
+    name: "GLACIER ICE DRIFT",
+    subtitle: "SUB-ZERO BLIZZARD TUNNELS",
+    bgColor: "#040d1a",
+    gridColor: "#0f2b48",
+    accent: "#38bdf8",
+    wallStart: "#38bdf8",
+    wallEnd: "#e0f2fe",
+    vortexColor: "#0284c7",
+    vortexGlow: "rgba(56, 189, 248, 0.4)",
+  },
+  4: {
+    name: "DESERT DUNE RALLY",
+    subtitle: "SANDSTORM VORTEX & DUNES",
+    bgColor: "#160e04",
+    gridColor: "#42280a",
+    accent: "#f59e0b",
+    wallStart: "#f59e0b",
+    wallEnd: "#fbbf24",
+    vortexColor: "#d97706",
+    vortexGlow: "rgba(245, 158, 11, 0.4)",
+  },
+  5: {
+    name: "COSMIC GRAVITY LOOP",
+    subtitle: "DEEP SPACE ZERO-G NEBULA",
+    bgColor: "#0c0418",
+    gridColor: "#281045",
+    accent: "#c084fc",
+    wallStart: "#a855f7",
+    wallEnd: "#ec4899",
+    vortexColor: "#9333ea",
+    vortexGlow: "rgba(168, 85, 247, 0.45)",
+  },
+};
+
 export interface MarbleRaceProps {
   episode?: number;
 }
@@ -31,6 +101,7 @@ export const MarbleRaceComposition: React.FC<MarbleRaceProps> = ({ episode = 1 }
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
+  const theme = MARBLE_THEMES[episode] || MARBLE_THEMES[1];
   const data = EPISODE_MAP[episode] || ep1Data;
   const currentFrameIdx = Math.min(frame, data.frames.length - 1);
   const frameData = data.frames[currentFrameIdx];
@@ -60,7 +131,7 @@ export const MarbleRaceComposition: React.FC<MarbleRaceProps> = ({ episode = 1 }
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: "#070b14",
+        backgroundColor: theme.bgColor,
         color: "#ffffff",
         fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
         overflow: "hidden",
@@ -73,9 +144,9 @@ export const MarbleRaceComposition: React.FC<MarbleRaceProps> = ({ episode = 1 }
         style={{
           position: "absolute",
           inset: 0,
-          opacity: 0.18,
+          opacity: 0.22,
           backgroundImage:
-            "linear-gradient(#203a43 1px, transparent 1px), linear-gradient(90deg, #203a43 1px, transparent 1px)",
+            `linear-gradient(${theme.gridColor} 1px, transparent 1px), linear-gradient(90deg, ${theme.gridColor} 1px, transparent 1px)`,
           backgroundSize: "60px 60px",
           backgroundPosition: `0px ${-cameraY % 60}px`,
         }}
@@ -99,12 +170,12 @@ export const MarbleRaceComposition: React.FC<MarbleRaceProps> = ({ episode = 1 }
         >
           <defs>
             <linearGradient id="wallGlow" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#00d2ff" stopOpacity="0.8" />
-              <stop offset="100%" stopColor="#9b5de5" stopOpacity="0.8" />
+              <stop offset="0%" stopColor={theme.wallStart} stopOpacity="0.8" />
+              <stop offset="100%" stopColor={theme.wallEnd} stopOpacity="0.8" />
             </linearGradient>
             <radialGradient id="vortexGlow">
-              <stop offset="0%" stopColor="#9b5de5" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#9b5de5" stopOpacity="0" />
+              <stop offset="0%" stopColor={theme.vortexColor} stopOpacity="0.3" />
+              <stop offset="100%" stopColor={theme.vortexColor} stopOpacity="0" />
             </radialGradient>
           </defs>
 
@@ -115,7 +186,7 @@ export const MarbleRaceComposition: React.FC<MarbleRaceProps> = ({ episode = 1 }
             cy="2850"
             r="380"
             fill="none"
-            stroke="#9b5de5"
+            stroke={theme.vortexColor}
             strokeWidth="3"
             strokeDasharray="16 12"
             opacity="0.4"
@@ -257,17 +328,17 @@ export const MarbleRaceComposition: React.FC<MarbleRaceProps> = ({ episode = 1 }
         <div>
           <div
             style={{
-              fontSize: 14,
+              fontSize: 13,
               fontWeight: 800,
               letterSpacing: 3,
-              color: "#00d2ff",
+              color: theme.accent,
               textTransform: "uppercase",
             }}
           >
-            Championship Cup • Race #{episode}
+            {theme.subtitle} • RACE #{episode}
           </div>
           <div style={{ fontSize: 28, fontWeight: 900, letterSpacing: -0.5 }}>
-            MARBLE GRAND PRIX
+            {theme.name}
           </div>
         </div>
 
